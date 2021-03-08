@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destinations",
+  "info": {
+    "name": "destination",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "reviews": {
+      "collection": "review"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "mapUrl": {
+      "type": "string",
+      "required": true
+    },
+    "reviewAverage": {
+      "type": "decimal"
+    },
+    "route": {
+      "type": "component",
+      "repeatable": false,
+      "component": "route.route",
+      "required": true
+    }
+  }
+}
