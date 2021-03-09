@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "features",
+  "info": {
+    "name": "feature",
+    "description": "List of all the features available in destinations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": false,
+    "populateCreatorFields": false,
+    "draftAndPublish": false,
+    "privateAttributes": [
+      "created_by",
+      "created_at",
+      "published_at",
+      "updated_at",
+      "id"
+    ]
+  },
+  "attributes": {
+    "feature_name": {
+      "type": "string",
+      "required": true
+    },
+    "feature_icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "feature_url": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "default": "#"
+    }
+  }
+}

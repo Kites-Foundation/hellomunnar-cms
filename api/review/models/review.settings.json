@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "title": {
@@ -23,18 +23,25 @@
       "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "images"
       ],
       "plugin": "upload",
       "required": false
     },
-    "status": {
+    "published": {
       "type": "boolean",
       "default": false,
       "private": true,
       "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "reviews"
+    },
+    "destination": {
+      "via": "reviews",
+      "collection": "destination"
     }
   }
 }

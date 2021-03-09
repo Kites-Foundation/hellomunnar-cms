@@ -519,8 +519,10 @@
           "id",
           "title",
           "description",
-          "mapUrl",
-          "route"
+          "map_url",
+          "review_average",
+          "reviews_count",
+          "thumbnail_image"
         ],
         "properties": {
           "id": {
@@ -536,7 +538,7 @@
                 "id",
                 "title",
                 "description",
-                "status"
+                "published"
               ],
               "properties": {
                 "id": {
@@ -554,11 +556,17 @@
                     "type": "string"
                   }
                 },
-                "status": {
+                "published": {
                   "type": "boolean"
                 },
-                "published_at": {
+                "user": {
                   "type": "string"
+                },
+                "destination": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -572,32 +580,276 @@
           "description": {
             "type": "string"
           },
-          "mapUrl": {
+          "map_url": {
             "type": "string"
           },
-          "reviewAverage": {
-            "type": "number"
+          "review_average": {
+            "type": "number",
+            "default": 0
           },
-          "route": {
-            "type": "object",
+          "meta_title": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "meta_description": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "og_image": {
             "required": [
-              "id"
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "routeType": {
-                "type": "string",
-                "enum": [
-                  "violet",
-                  "indigo",
-                  "blue",
-                  "green",
-                  "yellow",
-                  "orrange",
-                  "red"
-                ]
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "slug": {
+            "type": "uid"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "Violet",
+              "Indigo",
+              "Blue",
+              "Green",
+              "Yellow",
+              "Orrange",
+              "Red",
+              "NoRoute"
+            ]
+          },
+          "days_available": {
+            "type": "string"
+          },
+          "time_available": {
+            "type": "string"
+          },
+          "reviews_count": {
+            "type": "integer",
+            "default": 0
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "feature_name",
+                "feature_icon",
+                "feature_url"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "feature_name": {
+                  "type": "string"
+                },
+                "feature_icon": {
+                  "type": "string"
+                },
+                "feature_url": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "thumbnail_image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "main_image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           },
@@ -611,8 +863,9 @@
         "required": [
           "title",
           "description",
-          "mapUrl",
-          "route"
+          "map_url",
+          "review_average",
+          "reviews_count"
         ],
         "properties": {
           "title": {
@@ -627,33 +880,51 @@
           "description": {
             "type": "string"
           },
-          "mapUrl": {
+          "map_url": {
             "type": "string"
           },
-          "reviewAverage": {
-            "type": "number"
+          "review_average": {
+            "type": "number",
+            "default": 0
+          },
+          "meta_title": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "meta_description": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "slug": {
+            "type": "uid"
           },
           "route": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "routeType": {
-                "type": "string",
-                "enum": [
-                  "violet",
-                  "indigo",
-                  "blue",
-                  "green",
-                  "yellow",
-                  "orrange",
-                  "red"
-                ]
-              }
+            "type": "string",
+            "enum": [
+              "Violet",
+              "Indigo",
+              "Blue",
+              "Green",
+              "Yellow",
+              "Orrange",
+              "Red",
+              "NoRoute"
+            ]
+          },
+          "days_available": {
+            "type": "string"
+          },
+          "time_available": {
+            "type": "string"
+          },
+          "reviews_count": {
+            "type": "integer",
+            "default": 0
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "published_at": {

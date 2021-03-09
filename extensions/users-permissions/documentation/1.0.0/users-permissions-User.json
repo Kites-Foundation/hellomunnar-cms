@@ -1250,6 +1250,144 @@
                 "type": "string"
               }
             }
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "description",
+                "published"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published": {
+                  "type": "boolean"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "destination": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "favourites": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "description",
+                "map_url",
+                "review_average",
+                "reviews_count",
+                "thumbnail_image"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "reviews": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "description": {
+                  "type": "string"
+                },
+                "map_url": {
+                  "type": "string"
+                },
+                "review_average": {
+                  "type": "number"
+                },
+                "meta_title": {
+                  "type": "string"
+                },
+                "meta_description": {
+                  "type": "string"
+                },
+                "og_image": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "route": {
+                  "type": "string",
+                  "enum": [
+                    "Violet",
+                    "Indigo",
+                    "Blue",
+                    "Green",
+                    "Yellow",
+                    "Orrange",
+                    "Red",
+                    "NoRoute"
+                  ]
+                },
+                "days_available": {
+                  "type": "string"
+                },
+                "time_available": {
+                  "type": "string"
+                },
+                "reviews_count": {
+                  "type": "integer"
+                },
+                "features": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "thumbnail_image": {
+                  "type": "string"
+                },
+                "main_image": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -1291,6 +1429,18 @@
           },
           "role": {
             "type": "string"
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "favourites": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

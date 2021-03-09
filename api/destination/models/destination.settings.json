@@ -7,8 +7,15 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true,
-    "draftAndPublish": true
+    "timestamps": false,
+    "populateCreatorFields": false,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "created_by",
+      "created_at",
+      "published_at",
+      "updated_at"
+    ]
   },
   "attributes": {
     "title": {
@@ -16,24 +23,89 @@
       "required": true
     },
     "reviews": {
-      "collection": "review"
+      "collection": "review",
+      "via": "destination",
+      "dominant": true
     },
     "description": {
       "type": "text",
       "required": true
     },
-    "mapUrl": {
+    "map_url": {
       "type": "string",
       "required": true
     },
-    "reviewAverage": {
-      "type": "decimal"
+    "review_average": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "meta_title": {
+      "type": "string",
+      "maxLength": 60,
+      "unique": false
+    },
+    "meta_description": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "og_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     },
     "route": {
-      "type": "component",
-      "repeatable": false,
-      "component": "route.route",
+      "type": "enumeration",
+      "enum": [
+        "Violet",
+        "Indigo",
+        "Blue",
+        "Green",
+        "Yellow",
+        "Orrange",
+        "Red",
+        "NoRoute"
+      ]
+    },
+    "days_available": {
+      "type": "string"
+    },
+    "time_available": {
+      "type": "string"
+    },
+    "reviews_count": {
+      "type": "integer",
+      "default": 0,
       "required": true
+    },
+    "features": {
+      "collection": "feature"
+    },
+    "thumbnail_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "main_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
