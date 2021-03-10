@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_floara_and_fauna_floara_and_faunas",
+  "info": {
+    "name": "flora_and_fauna",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "main_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "sub_title": {
+      "type": "string",
+      "required": true
+    },
+    "badge_test": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -41,7 +41,7 @@
     },
     "destination": {
       "via": "reviews",
-      "collection": "destination"
+      "model": "destination"
     }
   }
 }

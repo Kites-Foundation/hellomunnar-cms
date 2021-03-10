@@ -20,7 +20,9 @@
       "type": "string"
     },
     "rails": {
-      "collection": "rail"
+      "type": "component",
+      "repeatable": true,
+      "component": "single-type-components.rails"
     }
   }
 }

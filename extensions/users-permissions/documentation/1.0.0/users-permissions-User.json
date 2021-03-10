@@ -1283,10 +1283,7 @@
                   "type": "string"
                 },
                 "destination": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"
@@ -1376,6 +1373,9 @@
                 },
                 "main_image": {
                   "type": "string"
+                },
+                "floara_and_fauna": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"

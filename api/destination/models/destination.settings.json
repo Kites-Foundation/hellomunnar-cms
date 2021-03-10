@@ -24,8 +24,7 @@
     },
     "reviews": {
       "collection": "review",
-      "via": "destination",
-      "dominant": true
+      "via": "destination"
     },
     "description": {
       "type": "text",
@@ -106,6 +105,11 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "floara_and_fauna": {
+      "type": "component",
+      "repeatable": true,
+      "component": "collection-type-components.floara-and-fauna"
     }
   }
 }
