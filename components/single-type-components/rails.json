@@ -5,7 +5,11 @@
     "icon": "braille",
     "description": ""
   },
-  "options": {},
+  "options": {
+    "privateAttributes": [
+      "id"
+    ]
+  },
   "attributes": {
     "title": {
       "type": "string",
@@ -16,7 +20,8 @@
     },
     "order": {
       "type": "integer",
-      "required": true
+      "required": true,
+      "default": 0
     },
     "rail_type": {
       "type": "enumeration",

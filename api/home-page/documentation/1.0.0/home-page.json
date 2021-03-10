@@ -439,7 +439,8 @@
                   }
                 },
                 "order": {
-                  "type": "integer"
+                  "type": "integer",
+                  "default": 0
                 },
                 "rail_type": {
                   "type": "string",
@@ -575,7 +576,8 @@
                   }
                 },
                 "order": {
-                  "type": "integer"
+                  "type": "integer",
+                  "default": 0
                 },
                 "rail_type": {
                   "type": "string",
