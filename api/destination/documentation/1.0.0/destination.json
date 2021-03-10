@@ -861,7 +861,7 @@
                 "main_image",
                 "description",
                 "sub_title",
-                "badge_test"
+                "badge_text"
               ],
               "properties": {
                 "id": {
@@ -1010,7 +1010,7 @@
                 "sub_title": {
                   "type": "string"
                 },
-                "badge_test": {
+                "badge_text": {
                   "type": "string"
                 }
               }
@@ -1101,7 +1101,7 @@
                 "main_image",
                 "description",
                 "sub_title",
-                "badge_test"
+                "badge_text"
               ],
               "properties": {
                 "id": {
@@ -1250,7 +1250,7 @@
                 "sub_title": {
                   "type": "string"
                 },
-                "badge_test": {
+                "badge_text": {
                   "type": "string"
                 }
               }

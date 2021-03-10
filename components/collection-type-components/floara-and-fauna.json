@@ -41,7 +41,7 @@
       "type": "string",
       "required": true
     },
-    "badge_test": {
+    "badge_text": {
       "type": "string",
       "required": true
     }
