@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "name": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": false,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "created_at",
+      "updated_at",
+      "published_at"
+    ]
+  },
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "rails": {
+      "collection": "rail"
+    }
+  }
+}

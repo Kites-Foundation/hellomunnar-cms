@@ -3,7 +3,7 @@
   "collectionName": "destinations",
   "info": {
     "name": "destination",
-    "description": ""
+    "description": "List of all the destinations"
   },
   "options": {
     "increments": true,

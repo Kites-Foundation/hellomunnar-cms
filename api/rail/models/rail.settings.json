@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rails",
+  "info": {
+    "name": "rail",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false,
+    "privateAttributes": [
+      "created_at",
+      "updated_at",
+      "location"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": false
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "destinations": {
+      "collection": "destination"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Carousel",
+        "Story"
+      ],
+      "required": true
+    }
+  }
+}
