@@ -11,10 +11,6 @@
     "populateCreatorFields": false,
     "draftAndPublish": false,
     "privateAttributes": [
-      "created_by",
-      "created_at",
-      "published_at",
-      "updated_at",
       "id"
     ]
   },

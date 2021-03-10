@@ -9,13 +9,7 @@
     "increments": true,
     "timestamps": false,
     "populateCreatorFields": false,
-    "draftAndPublish": true,
-    "privateAttributes": [
-      "created_by",
-      "created_at",
-      "published_at",
-      "updated_at"
-    ]
+    "draftAndPublish": true
   },
   "attributes": {
     "title": {

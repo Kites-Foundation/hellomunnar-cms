@@ -8,12 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": false,
-    "draftAndPublish": true,
-    "privateAttributes": [
-      "created_at",
-      "updated_at",
-      "published_at"
-    ]
+    "draftAndPublish": true
   },
   "attributes": {
     "page_title": {
