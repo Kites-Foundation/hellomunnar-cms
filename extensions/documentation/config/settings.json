@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "HelloMunnar API Documentation",
+    "description": "List of HelloMunnar APIs",
+    "termsOfService": "https://hellomunnar.in/",
+    "contact": {
+      "name": "TEAM",
+      "email": "backend@hellomunnar.in/",
+      "url": "https://hellomunnar.in/"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
+    }
+  },
+  "x-strapi-config": {
+    "path": "/documentation",
+    "showGeneratedFiles": true,
+    "pluginsForWhichToGenerateDoc": []
+  },
+  "servers": [
+    {
+      "url": "http://localhost:1337",
+      "description": "Development server"
+    },
+    {
+      "url": "https://cmsstaging.hellomunnar.in",
+      "description": "Staging server"
+    },
+    {
+      "url": "https://cms.hellomunnar.in",
+      "description": "Production server"
+    }
+  ],
+  "externalDocs": {
+    "description": "Find out more",
+    "url": "https://github.com/Kites-Foundation/hello-munnar-frontend"
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {},
+  "tags": [],
+  "components": {}
+}
