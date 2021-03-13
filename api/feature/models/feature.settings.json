@@ -15,11 +15,11 @@
     ]
   },
   "attributes": {
-    "feature_name": {
+    "featureName": {
       "type": "string",
       "required": true
     },
-    "feature_icon": {
+    "featureIcon": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -28,7 +28,7 @@
       "plugin": "upload",
       "required": true
     },
-    "feature_url": {
+    "featureUrl": {
       "type": "string",
       "private": false,
       "required": true,

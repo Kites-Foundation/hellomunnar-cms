@@ -517,18 +517,18 @@
       "Feature": {
         "required": [
           "id",
-          "feature_name",
-          "feature_icon",
-          "feature_url"
+          "featureName",
+          "featureIcon",
+          "featureUrl"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "feature_name": {
+          "featureName": {
             "type": "string"
           },
-          "feature_icon": {
+          "featureIcon": {
             "required": [
               "id",
               "name",
@@ -595,7 +595,7 @@
               }
             }
           },
-          "feature_url": {
+          "featureUrl": {
             "type": "string",
             "default": "#"
           }
@@ -603,14 +603,14 @@
       },
       "NewFeature": {
         "required": [
-          "feature_name",
-          "feature_url"
+          "featureName",
+          "featureUrl"
         ],
         "properties": {
-          "feature_name": {
+          "featureName": {
             "type": "string"
           },
-          "feature_url": {
+          "featureUrl": {
             "type": "string",
             "default": "#"
           },

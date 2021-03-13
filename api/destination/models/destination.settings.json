@@ -24,25 +24,25 @@
       "type": "text",
       "required": true
     },
-    "map_url": {
+    "mapUrl": {
       "type": "string",
       "required": true
     },
-    "review_average": {
+    "reviewAverage": {
       "type": "decimal",
       "default": 0,
       "required": true
     },
-    "meta_title": {
+    "metaTitle": {
       "type": "string",
       "maxLength": 60,
       "unique": false
     },
-    "meta_description": {
+    "metaDescription": {
       "type": "string",
       "maxLength": 160
     },
-    "og_image": {
+    "ogImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -68,13 +68,13 @@
         "NoRoute"
       ]
     },
-    "days_available": {
+    "daysAvailable": {
       "type": "string"
     },
-    "time_available": {
+    "timeAvailable": {
       "type": "string"
     },
-    "reviews_count": {
+    "reviewsCount": {
       "type": "integer",
       "default": 0,
       "required": true
@@ -82,7 +82,7 @@
     "features": {
       "collection": "feature"
     },
-    "thumbnail_image": {
+    "thumbnailImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -91,7 +91,7 @@
       "plugin": "upload",
       "required": true
     },
-    "main_image": {
+    "mainImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -100,7 +100,7 @@
       "plugin": "upload",
       "required": false
     },
-    "floara_and_fauna": {
+    "floaraAndFauna": {
       "type": "component",
       "repeatable": true,
       "component": "collection-type-components.floara-and-fauna"

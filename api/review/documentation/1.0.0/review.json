@@ -663,10 +663,10 @@
               "id",
               "title",
               "description",
-              "map_url",
-              "review_average",
-              "reviews_count",
-              "thumbnail_image"
+              "mapUrl",
+              "reviewAverage",
+              "reviewsCount",
+              "thumbnailImage"
             ],
             "properties": {
               "id": {
@@ -684,19 +684,19 @@
               "description": {
                 "type": "string"
               },
-              "map_url": {
+              "mapUrl": {
                 "type": "string"
               },
-              "review_average": {
+              "reviewAverage": {
                 "type": "number"
               },
-              "meta_title": {
+              "metaTitle": {
                 "type": "string"
               },
-              "meta_description": {
+              "metaDescription": {
                 "type": "string"
               },
-              "og_image": {
+              "ogImage": {
                 "type": "string"
               },
               "slug": {
@@ -715,13 +715,13 @@
                   "NoRoute"
                 ]
               },
-              "days_available": {
+              "daysAvailable": {
                 "type": "string"
               },
-              "time_available": {
+              "timeAvailable": {
                 "type": "string"
               },
-              "reviews_count": {
+              "reviewsCount": {
                 "type": "integer"
               },
               "features": {
@@ -730,13 +730,13 @@
                   "type": "string"
                 }
               },
-              "thumbnail_image": {
+              "thumbnailImage": {
                 "type": "string"
               },
-              "main_image": {
+              "mainImage": {
                 "type": "string"
               },
-              "floara_and_fauna": {
+              "floaraAndFauna": {
                 "type": "component"
               },
               "published_at": {

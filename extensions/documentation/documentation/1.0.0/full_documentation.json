@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "03/11/2021 2:12:51 PM"
+    "x-generation-date": "03/13/2021 1:50:00 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1899,10 +1899,10 @@
           "id",
           "title",
           "description",
-          "map_url",
-          "review_average",
-          "reviews_count",
-          "thumbnail_image"
+          "mapUrl",
+          "reviewAverage",
+          "reviewsCount",
+          "thumbnailImage"
         ],
         "properties": {
           "id": {
@@ -1957,22 +1957,22 @@
           "description": {
             "type": "string"
           },
-          "map_url": {
+          "mapUrl": {
             "type": "string"
           },
-          "review_average": {
+          "reviewAverage": {
             "type": "number",
             "default": 0
           },
-          "meta_title": {
+          "metaTitle": {
             "type": "string",
             "maxLength": 60
           },
-          "meta_description": {
+          "metaDescription": {
             "type": "string",
             "maxLength": 160
           },
-          "og_image": {
+          "ogImage": {
             "required": [
               "id",
               "name",
@@ -2055,13 +2055,13 @@
               "NoRoute"
             ]
           },
-          "days_available": {
+          "daysAvailable": {
             "type": "string"
           },
-          "time_available": {
+          "timeAvailable": {
             "type": "string"
           },
-          "reviews_count": {
+          "reviewsCount": {
             "type": "integer",
             "default": 0
           },
@@ -2070,21 +2070,21 @@
             "items": {
               "required": [
                 "id",
-                "feature_name",
-                "feature_icon",
-                "feature_url"
+                "featureName",
+                "featureIcon",
+                "featureUrl"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "feature_name": {
+                "featureName": {
                   "type": "string"
                 },
-                "feature_icon": {
+                "featureIcon": {
                   "type": "string"
                 },
-                "feature_url": {
+                "featureUrl": {
                   "type": "string"
                 },
                 "created_by": {
@@ -2096,7 +2096,7 @@
               }
             }
           },
-          "thumbnail_image": {
+          "thumbnailImage": {
             "required": [
               "id",
               "name",
@@ -2163,7 +2163,7 @@
               }
             }
           },
-          "main_image": {
+          "mainImage": {
             "required": [
               "id",
               "name",
@@ -2230,18 +2230,18 @@
               }
             }
           },
-          "floara_and_fauna": {
+          "floaraAndFauna": {
             "type": "array",
             "items": {
               "type": "object",
               "required": [
                 "id",
                 "title",
-                "thumbnail_image",
-                "main_image",
+                "thumbnailImage",
+                "mainImage",
                 "description",
-                "sub_title",
-                "badge_text"
+                "subTitle",
+                "badgeText"
               ],
               "properties": {
                 "id": {
@@ -2250,7 +2250,7 @@
                 "title": {
                   "type": "string"
                 },
-                "thumbnail_image": {
+                "thumbnailImage": {
                   "required": [
                     "id",
                     "name",
@@ -2317,7 +2317,7 @@
                     }
                   }
                 },
-                "main_image": {
+                "mainImage": {
                   "required": [
                     "id",
                     "name",
@@ -2387,10 +2387,10 @@
                 "description": {
                   "type": "string"
                 },
-                "sub_title": {
+                "subTitle": {
                   "type": "string"
                 },
-                "badge_text": {
+                "badgeText": {
                   "type": "string"
                 }
               }
@@ -2406,9 +2406,9 @@
         "required": [
           "title",
           "description",
-          "map_url",
-          "review_average",
-          "reviews_count"
+          "mapUrl",
+          "reviewAverage",
+          "reviewsCount"
         ],
         "properties": {
           "title": {
@@ -2423,18 +2423,18 @@
           "description": {
             "type": "string"
           },
-          "map_url": {
+          "mapUrl": {
             "type": "string"
           },
-          "review_average": {
+          "reviewAverage": {
             "type": "number",
             "default": 0
           },
-          "meta_title": {
+          "metaTitle": {
             "type": "string",
             "maxLength": 60
           },
-          "meta_description": {
+          "metaDescription": {
             "type": "string",
             "maxLength": 160
           },
@@ -2454,13 +2454,13 @@
               "NoRoute"
             ]
           },
-          "days_available": {
+          "daysAvailable": {
             "type": "string"
           },
-          "time_available": {
+          "timeAvailable": {
             "type": "string"
           },
-          "reviews_count": {
+          "reviewsCount": {
             "type": "integer",
             "default": 0
           },
@@ -2470,18 +2470,18 @@
               "type": "string"
             }
           },
-          "floara_and_fauna": {
+          "floaraAndFauna": {
             "type": "array",
             "items": {
               "type": "object",
               "required": [
                 "id",
                 "title",
-                "thumbnail_image",
-                "main_image",
+                "thumbnailImage",
+                "mainImage",
                 "description",
-                "sub_title",
-                "badge_text"
+                "subTitle",
+                "badgeText"
               ],
               "properties": {
                 "id": {
@@ -2490,7 +2490,7 @@
                 "title": {
                   "type": "string"
                 },
-                "thumbnail_image": {
+                "thumbnailImage": {
                   "required": [
                     "id",
                     "name",
@@ -2557,7 +2557,7 @@
                     }
                   }
                 },
-                "main_image": {
+                "mainImage": {
                   "required": [
                     "id",
                     "name",
@@ -2627,10 +2627,10 @@
                 "description": {
                   "type": "string"
                 },
-                "sub_title": {
+                "subTitle": {
                   "type": "string"
                 },
-                "badge_text": {
+                "badgeText": {
                   "type": "string"
                 }
               }
@@ -2651,18 +2651,18 @@
       "Feature": {
         "required": [
           "id",
-          "feature_name",
-          "feature_icon",
-          "feature_url"
+          "featureName",
+          "featureIcon",
+          "featureUrl"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "feature_name": {
+          "featureName": {
             "type": "string"
           },
-          "feature_icon": {
+          "featureIcon": {
             "required": [
               "id",
               "name",
@@ -2729,7 +2729,7 @@
               }
             }
           },
-          "feature_url": {
+          "featureUrl": {
             "type": "string",
             "default": "#"
           }
@@ -2737,14 +2737,14 @@
       },
       "NewFeature": {
         "required": [
-          "feature_name",
-          "feature_url"
+          "featureName",
+          "featureUrl"
         ],
         "properties": {
-          "feature_name": {
+          "featureName": {
             "type": "string"
           },
-          "feature_url": {
+          "featureUrl": {
             "type": "string",
             "default": "#"
           },
@@ -2791,10 +2791,10 @@
                       "id",
                       "title",
                       "description",
-                      "map_url",
-                      "review_average",
-                      "reviews_count",
-                      "thumbnail_image"
+                      "mapUrl",
+                      "reviewAverage",
+                      "reviewsCount",
+                      "thumbnailImage"
                     ],
                     "properties": {
                       "id": {
@@ -2812,19 +2812,19 @@
                       "description": {
                         "type": "string"
                       },
-                      "map_url": {
+                      "mapUrl": {
                         "type": "string"
                       },
-                      "review_average": {
+                      "reviewAverage": {
                         "type": "number"
                       },
-                      "meta_title": {
+                      "metaTitle": {
                         "type": "string"
                       },
-                      "meta_description": {
+                      "metaDescription": {
                         "type": "string"
                       },
-                      "og_image": {
+                      "ogImage": {
                         "type": "string"
                       },
                       "slug": {
@@ -2843,13 +2843,13 @@
                           "NoRoute"
                         ]
                       },
-                      "days_available": {
+                      "daysAvailable": {
                         "type": "string"
                       },
-                      "time_available": {
+                      "timeAvailable": {
                         "type": "string"
                       },
-                      "reviews_count": {
+                      "reviewsCount": {
                         "type": "integer"
                       },
                       "features": {
@@ -2858,13 +2858,13 @@
                           "type": "string"
                         }
                       },
-                      "thumbnail_image": {
+                      "thumbnailImage": {
                         "type": "string"
                       },
-                      "main_image": {
+                      "mainImage": {
                         "type": "string"
                       },
-                      "floara_and_fauna": {
+                      "floaraAndFauna": {
                         "type": "component"
                       },
                       "published_at": {
@@ -2928,10 +2928,10 @@
                       "id",
                       "title",
                       "description",
-                      "map_url",
-                      "review_average",
-                      "reviews_count",
-                      "thumbnail_image"
+                      "mapUrl",
+                      "reviewAverage",
+                      "reviewsCount",
+                      "thumbnailImage"
                     ],
                     "properties": {
                       "id": {
@@ -2949,19 +2949,19 @@
                       "description": {
                         "type": "string"
                       },
-                      "map_url": {
+                      "mapUrl": {
                         "type": "string"
                       },
-                      "review_average": {
+                      "reviewAverage": {
                         "type": "number"
                       },
-                      "meta_title": {
+                      "metaTitle": {
                         "type": "string"
                       },
-                      "meta_description": {
+                      "metaDescription": {
                         "type": "string"
                       },
-                      "og_image": {
+                      "ogImage": {
                         "type": "string"
                       },
                       "slug": {
@@ -2980,13 +2980,13 @@
                           "NoRoute"
                         ]
                       },
-                      "days_available": {
+                      "daysAvailable": {
                         "type": "string"
                       },
-                      "time_available": {
+                      "timeAvailable": {
                         "type": "string"
                       },
-                      "reviews_count": {
+                      "reviewsCount": {
                         "type": "integer"
                       },
                       "features": {
@@ -2995,13 +2995,13 @@
                           "type": "string"
                         }
                       },
-                      "thumbnail_image": {
+                      "thumbnailImage": {
                         "type": "string"
                       },
-                      "main_image": {
+                      "mainImage": {
                         "type": "string"
                       },
-                      "floara_and_fauna": {
+                      "floaraAndFauna": {
                         "type": "component"
                       },
                       "published_at": {
@@ -3191,10 +3191,10 @@
               "id",
               "title",
               "description",
-              "map_url",
-              "review_average",
-              "reviews_count",
-              "thumbnail_image"
+              "mapUrl",
+              "reviewAverage",
+              "reviewsCount",
+              "thumbnailImage"
             ],
             "properties": {
               "id": {
@@ -3212,19 +3212,19 @@
               "description": {
                 "type": "string"
               },
-              "map_url": {
+              "mapUrl": {
                 "type": "string"
               },
-              "review_average": {
+              "reviewAverage": {
                 "type": "number"
               },
-              "meta_title": {
+              "metaTitle": {
                 "type": "string"
               },
-              "meta_description": {
+              "metaDescription": {
                 "type": "string"
               },
-              "og_image": {
+              "ogImage": {
                 "type": "string"
               },
               "slug": {
@@ -3243,13 +3243,13 @@
                   "NoRoute"
                 ]
               },
-              "days_available": {
+              "daysAvailable": {
                 "type": "string"
               },
-              "time_available": {
+              "timeAvailable": {
                 "type": "string"
               },
-              "reviews_count": {
+              "reviewsCount": {
                 "type": "integer"
               },
               "features": {
@@ -3258,13 +3258,13 @@
                   "type": "string"
                 }
               },
-              "thumbnail_image": {
+              "thumbnailImage": {
                 "type": "string"
               },
-              "main_image": {
+              "mainImage": {
                 "type": "string"
               },
-              "floara_and_fauna": {
+              "floaraAndFauna": {
                 "type": "component"
               },
               "published_at": {

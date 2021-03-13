@@ -11,7 +11,7 @@
       "type": "string",
       "required": true
     },
-    "thumbnail_image": {
+    "thumbnailImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -20,7 +20,7 @@
       "plugin": "upload",
       "required": true
     },
-    "main_image": {
+    "mainImage": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -33,11 +33,11 @@
       "type": "text",
       "required": true
     },
-    "sub_title": {
+    "subTitle": {
       "type": "string",
       "required": true
     },
-    "badge_text": {
+    "badgeText": {
       "type": "string",
       "required": true
     }
