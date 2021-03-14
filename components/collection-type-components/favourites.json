@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_collection_type_components_favourites",
+  "info": {
+    "name": "favourites",
+    "icon": "grin-stars"
+  },
+  "options": {},
+  "attributes": {
+    "destinations": {
+      "collection": "destination"
+    },
+    "activities": {
+      "collection": "activity"
+    }
+  }
+}

@@ -35,13 +35,17 @@
       "required": true
     },
     "user": {
+      "via": "reviews",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "reviews"
+      "model": "user"
     },
     "destination": {
+      "model": "destination",
+      "via": "reviews"
+    },
+    "activity": {
       "via": "reviews",
-      "model": "destination"
+      "model": "activity"
     }
   }
 }

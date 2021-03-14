@@ -17,8 +17,8 @@
       "required": true
     },
     "reviews": {
-      "collection": "review",
-      "via": "destination"
+      "via": "destination",
+      "collection": "review"
     },
     "description": {
       "type": "text",

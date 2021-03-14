@@ -60,11 +60,13 @@
       "configurable": false
     },
     "reviews": {
-      "via": "user",
-      "collection": "review"
+      "collection": "review",
+      "via": "user"
     },
     "favourites": {
-      "collection": "destination"
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.favourites"
     }
   }
 }
