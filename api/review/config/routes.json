@@ -37,7 +37,7 @@
       "path": "/reviews/:id",
       "handler": "review.update",
       "config": {
-        "policies": []
+        "policies": ["global::isAuthenticated"]
       }
     },
     {

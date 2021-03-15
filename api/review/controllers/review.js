@@ -67,4 +67,36 @@ module.exports = {
     }
     return sanitizeEntity(entity, { model: strapi.models.review });
   },
+  async update(ctx) {
+    const { id } = ctx.params;
+    const user = ctx.state.user.id;
+
+    const canUserUpdate = await strapi.query("review").findOne({ user, id });
+
+    if (!canUserUpdate) {
+      return ctx.badRequest(null, [
+        { messages: [{ id: "Update permission denied" }] },
+      ]);
+    }
+
+    let entity;
+    if (ctx.is("multipart")) {
+      const { data, files } = parseMultipartData(ctx);
+      data.user = ctx.state.user.id;
+      // updatating destination and activity not allowed
+      delete data?.destination;
+      delete data?.activity;
+      entity = await strapi.services.review.update({ id }, data, {
+        files,
+      });
+    } else {
+      ctx.request.body.user = ctx.state.user.id;
+      // updatating destination and activity not allowed
+      delete ctx.request.body?.destination;
+      delete ctx.request.body?.activity;
+      entity = await strapi.services.review.update({ id }, ctx.request.body);
+    }
+
+    return sanitizeEntity(entity, { model: strapi.models.review });
+  },
 };
