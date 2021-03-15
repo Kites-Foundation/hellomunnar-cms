@@ -687,15 +687,6 @@
               "reviewAverage": {
                 "type": "number"
               },
-              "metaTitle": {
-                "type": "string"
-              },
-              "metaDescription": {
-                "type": "string"
-              },
-              "ogImage": {
-                "type": "string"
-              },
               "slug": {
                 "type": "uid"
               },
@@ -734,6 +725,9 @@
                 "type": "string"
               },
               "floaraAndFauna": {
+                "type": "component"
+              },
+              "seoMeta": {
                 "type": "component"
               },
               "published_at": {
@@ -823,14 +817,8 @@
               "bookingUrl": {
                 "type": "string"
               },
-              "metaTitle": {
-                "type": "string"
-              },
-              "metaDescription": {
-                "type": "string"
-              },
-              "ogImage": {
-                "type": "string"
+              "seoMeta": {
+                "type": "component"
               },
               "published_at": {
                 "type": "string"

@@ -90,23 +90,10 @@
     "bookingUrl": {
       "type": "string"
     },
-    "metaTitle": {
-      "type": "string",
-      "maxLength": 60
-    },
-    "metaDescription": {
-      "type": "string",
-      "unique": false,
-      "maxLength": 160
-    },
-    "ogImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
+    "seoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo"
     }
   }
 }

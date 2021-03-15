@@ -21,6 +21,12 @@
       "type": "component",
       "repeatable": true,
       "component": "single-type-components.rails"
+    },
+    "seoMeta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.seo",
+      "required": false
     }
   }
 }

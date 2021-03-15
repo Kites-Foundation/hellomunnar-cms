@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_common_seos",
+  "info": {
+    "name": "SEO",
+    "icon": "house-damage"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "metaDescription": {
+      "type": "string",
+      "maxLength": 160
+    },
+    "ogImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

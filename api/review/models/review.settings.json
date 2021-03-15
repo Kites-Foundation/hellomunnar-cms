@@ -40,8 +40,8 @@
       "model": "user"
     },
     "destination": {
-      "model": "destination",
-      "via": "reviews"
+      "via": "reviews",
+      "model": "destination"
     },
     "activity": {
       "via": "reviews",
