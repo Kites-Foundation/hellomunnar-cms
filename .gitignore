@@ -117,3 +117,4 @@ build
 # Custom
 ############################
 docker-data
+.env.pgsql
