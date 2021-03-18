@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_collection_type_components_bookings",
+  "info": {
+    "name": "booking",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "contactName": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -87,13 +87,15 @@
         "Red"
       ]
     },
-    "bookingUrl": {
-      "type": "string"
-    },
     "seoMeta": {
       "type": "component",
       "repeatable": false,
       "component": "common.seo"
+    },
+    "booking": {
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.booking"
     }
   }
 }
