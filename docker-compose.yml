@@ -1,0 +1,27 @@
+version: "3.1"
+services:
+  strapi:
+    build: .
+    ports:
+      - "1337:1337"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ".env"
+    networks:
+      - strapi-app-network
+    depends_on:
+      - strapi-database
+  strapi-database:
+    image: postgres
+    restart: unless-stopped
+    env_file:
+        - ".env"
+    volumes:
+      - ./docker-data/database-data:/var/lib/postgresql/data/ 
+    networks:
+      - strapi-app-network
+networks:
+  strapi-app-network:
+    driver: bridge
