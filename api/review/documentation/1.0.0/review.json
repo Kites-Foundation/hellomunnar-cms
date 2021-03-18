@@ -814,10 +814,10 @@
                   "Red"
                 ]
               },
-              "bookingUrl": {
-                "type": "string"
-              },
               "seoMeta": {
+                "type": "component"
+              },
+              "booking": {
                 "type": "component"
               },
               "published_at": {
