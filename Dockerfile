@@ -5,6 +5,7 @@ COPY package.json yarn.lock ./
 RUN yarn
 COPY . ./
 COPY dashboard-config.json /tmp/dashboard-config.json
+RUN export NODE_ENV=production && yarn build
 # Replacing dummy with the actual value
 RUN sed -i "s|googleClientId|$GOOGLE_CLIENT_ID|g" /tmp/dashboard-config.json && sed -i "s|googleClientSecret|$GOOGLE_CLIENT_SECRET|g" /tmp/dashboard-config.json
-CMD ["start.sh"]
+CMD ["sh","start.sh"]
