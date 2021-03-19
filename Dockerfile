@@ -1,5 +1,5 @@
 FROM node:14-alpine
-RUN apk install --upgrade git
+RUN apk add --upgrade git
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn
