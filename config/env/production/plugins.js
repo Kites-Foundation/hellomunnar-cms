@@ -9,7 +9,8 @@ module.exports = ({ env }) => ({
       params: {
         Bucket: env('AWS_BUCKET'),
       },
-      cdn: env('CDN_URL', 'https://cdn.hellomunnar.in/')
+      cdn: env('CDN_URL', 'https://cdn.hellomunnar.in/'),
+      prefix: env('S3_PREFIX', '')
     },
   },
 });
