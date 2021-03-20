@@ -18,4 +18,5 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ~/hellomunnar-cms/
+            git pull
             docker-compose up -d --build --remove-orphans
