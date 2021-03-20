@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "flora_and_faunas",
   "info": {
-    "name": "FloraAndFauna"
+    "name": "FloraAndFauna",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -18,18 +19,7 @@
       "type": "text",
       "required": true
     },
-    "mainImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
-    "thumbnailImage": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [

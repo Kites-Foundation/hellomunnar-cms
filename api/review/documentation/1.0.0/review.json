@@ -662,8 +662,7 @@
               "description",
               "mapUrl",
               "reviewAverage",
-              "reviewsCount",
-              "thumbnailImage"
+              "reviewsCount"
             ],
             "properties": {
               "id": {
@@ -718,10 +717,7 @@
                   "type": "string"
                 }
               },
-              "thumbnailImage": {
-                "type": "string"
-              },
-              "mainImage": {
+              "image": {
                 "type": "string"
               },
               "seoMeta": {
@@ -749,8 +745,7 @@
               "id",
               "name",
               "description",
-              "mainImage",
-              "thumbnailImage",
+              "image",
               "badgeText",
               "daysAvailable",
               "timeAvailable",
@@ -769,10 +764,7 @@
               "description": {
                 "type": "string"
               },
-              "mainImage": {
-                "type": "string"
-              },
-              "thumbnailImage": {
+              "image": {
                 "type": "string"
               },
               "reviews": {

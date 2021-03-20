@@ -11,16 +11,7 @@
       "type": "string",
       "required": true
     },
-    "thumbnailImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": true
-    },
-    "mainImage": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [

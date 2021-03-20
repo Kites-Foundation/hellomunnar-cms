@@ -19,16 +19,7 @@
       "type": "string",
       "required": true
     },
-    "mainImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": true
-    },
-    "thumbnailImage": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [

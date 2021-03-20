@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "03/20/2021 4:52:03 PM"
+    "x-generation-date": "03/20/2021 9:17:52 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2934,8 +2934,7 @@
           "id",
           "name",
           "description",
-          "mainImage",
-          "thumbnailImage",
+          "image",
           "badgeText",
           "daysAvailable",
           "timeAvailable",
@@ -2954,74 +2953,7 @@
           "description": {
             "type": "string"
           },
-          "mainImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "thumbnailImage": {
+          "image": {
             "required": [
               "id",
               "name",
@@ -3474,8 +3406,7 @@
           "description",
           "mapUrl",
           "reviewAverage",
-          "reviewsCount",
-          "thumbnailImage"
+          "reviewsCount"
         ],
         "properties": {
           "id": {
@@ -3597,74 +3528,7 @@
               }
             }
           },
-          "thumbnailImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "mainImage": {
+          "image": {
             "required": [
               "id",
               "name",
@@ -3840,10 +3704,7 @@
                 "description": {
                   "type": "string"
                 },
-                "mainImage": {
-                  "type": "string"
-                },
-                "thumbnailImage": {
+                "image": {
                   "type": "string"
                 },
                 "subTitle": {
@@ -4160,74 +4021,7 @@
           "description": {
             "type": "string"
           },
-          "mainImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "thumbnailImage": {
+          "image": {
             "required": [
               "id",
               "name",
@@ -4367,8 +4161,7 @@
                       "description",
                       "mapUrl",
                       "reviewAverage",
-                      "reviewsCount",
-                      "thumbnailImage"
+                      "reviewsCount"
                     ],
                     "properties": {
                       "id": {
@@ -4423,10 +4216,7 @@
                           "type": "string"
                         }
                       },
-                      "thumbnailImage": {
-                        "type": "string"
-                      },
-                      "mainImage": {
+                      "image": {
                         "type": "string"
                       },
                       "seoMeta": {
@@ -4468,8 +4258,7 @@
                       "id",
                       "name",
                       "description",
-                      "mainImage",
-                      "thumbnailImage",
+                      "image",
                       "badgeText",
                       "daysAvailable",
                       "timeAvailable",
@@ -4488,10 +4277,7 @@
                       "description": {
                         "type": "string"
                       },
-                      "mainImage": {
-                        "type": "string"
-                      },
-                      "thumbnailImage": {
+                      "image": {
                         "type": "string"
                       },
                       "reviews": {
@@ -4680,8 +4466,7 @@
                       "description",
                       "mapUrl",
                       "reviewAverage",
-                      "reviewsCount",
-                      "thumbnailImage"
+                      "reviewsCount"
                     ],
                     "properties": {
                       "id": {
@@ -4736,10 +4521,7 @@
                           "type": "string"
                         }
                       },
-                      "thumbnailImage": {
-                        "type": "string"
-                      },
-                      "mainImage": {
+                      "image": {
                         "type": "string"
                       },
                       "seoMeta": {
@@ -4781,8 +4563,7 @@
                       "id",
                       "name",
                       "description",
-                      "mainImage",
-                      "thumbnailImage",
+                      "image",
                       "badgeText",
                       "daysAvailable",
                       "timeAvailable",
@@ -4801,10 +4582,7 @@
                       "description": {
                         "type": "string"
                       },
-                      "mainImage": {
-                        "type": "string"
-                      },
-                      "thumbnailImage": {
+                      "image": {
                         "type": "string"
                       },
                       "reviews": {
@@ -5116,8 +4894,7 @@
               "description",
               "mapUrl",
               "reviewAverage",
-              "reviewsCount",
-              "thumbnailImage"
+              "reviewsCount"
             ],
             "properties": {
               "id": {
@@ -5172,10 +4949,7 @@
                   "type": "string"
                 }
               },
-              "thumbnailImage": {
-                "type": "string"
-              },
-              "mainImage": {
+              "image": {
                 "type": "string"
               },
               "seoMeta": {
@@ -5203,8 +4977,7 @@
               "id",
               "name",
               "description",
-              "mainImage",
-              "thumbnailImage",
+              "image",
               "badgeText",
               "daysAvailable",
               "timeAvailable",
@@ -5223,10 +4996,7 @@
               "description": {
                 "type": "string"
               },
-              "mainImage": {
-                "type": "string"
-              },
-              "thumbnailImage": {
+              "image": {
                 "type": "string"
               },
               "reviews": {
