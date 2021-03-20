@@ -471,12 +471,6 @@
                       "image": {
                         "type": "string"
                       },
-                      "reviews": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      },
                       "badgeText": {
                         "type": "string"
                       },
@@ -518,6 +512,12 @@
                       },
                       "booking": {
                         "type": "component"
+                      },
+                      "reviews": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"
@@ -776,12 +776,6 @@
                       "image": {
                         "type": "string"
                       },
-                      "reviews": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      },
                       "badgeText": {
                         "type": "string"
                       },
@@ -823,6 +817,12 @@
                       },
                       "booking": {
                         "type": "component"
+                      },
+                      "reviews": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"

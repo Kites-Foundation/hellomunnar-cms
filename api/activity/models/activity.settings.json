@@ -28,10 +28,6 @@
       "plugin": "upload",
       "required": true
     },
-    "reviews": {
-      "collection": "review",
-      "via": "activity"
-    },
     "badgeText": {
       "type": "string",
       "required": true
@@ -87,6 +83,10 @@
       "type": "component",
       "repeatable": false,
       "component": "collection-type-components.booking"
+    },
+    "reviews": {
+      "collection": "review",
+      "via": "activity"
     }
   }
 }

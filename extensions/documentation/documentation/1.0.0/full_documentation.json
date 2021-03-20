@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "03/20/2021 9:17:52 PM"
+    "x-generation-date": "03/20/2021 10:47:25 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3020,6 +3020,151 @@
               }
             }
           },
+          "badgeText": {
+            "type": "string"
+          },
+          "daysAvailable": {
+            "type": "string"
+          },
+          "timeAvailable": {
+            "type": "string"
+          },
+          "mapUrl": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "uid"
+          },
+          "reviewAverage": {
+            "type": "number",
+            "default": 0
+          },
+          "reviewsCount": {
+            "type": "integer",
+            "default": 0
+          },
+          "cost": {
+            "type": "string"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "Violet",
+              "Indigo",
+              "Blue",
+              "Green",
+              "Yellow",
+              "Orrange",
+              "Red"
+            ]
+          },
+          "seoMeta": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "metaTitle": {
+                "type": "string",
+                "maxLength": 60
+              },
+              "metaDescription": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "ogImage": {
+                "required": [
+                  "id",
+                  "name",
+                  "hash",
+                  "mime",
+                  "size",
+                  "url",
+                  "provider"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "alternativeText": {
+                    "type": "string"
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "width": {
+                    "type": "integer"
+                  },
+                  "height": {
+                    "type": "integer"
+                  },
+                  "formats": {
+                    "type": "object"
+                  },
+                  "hash": {
+                    "type": "string"
+                  },
+                  "ext": {
+                    "type": "string"
+                  },
+                  "mime": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "previewUrl": {
+                    "type": "string"
+                  },
+                  "provider": {
+                    "type": "string"
+                  },
+                  "provider_metadata": {
+                    "type": "object"
+                  },
+                  "related": {
+                    "type": "string"
+                  },
+                  "created_by": {
+                    "type": "string"
+                  },
+                  "updated_by": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "booking": {
+            "type": "object",
+            "required": [
+              "id",
+              "url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "contactName": {
+                "type": "string"
+              },
+              "contactNumber": {
+                "type": "integer"
+              }
+            }
+          },
           "reviews": {
             "type": "array",
             "items": {
@@ -3066,151 +3211,6 @@
               }
             }
           },
-          "badgeText": {
-            "type": "string"
-          },
-          "daysAvailable": {
-            "type": "string"
-          },
-          "timeAvailable": {
-            "type": "string"
-          },
-          "mapUrl": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "reviewAverage": {
-            "type": "number",
-            "default": 0
-          },
-          "reviewsCount": {
-            "type": "integer",
-            "default": 0
-          },
-          "cost": {
-            "type": "string"
-          },
-          "route": {
-            "type": "string",
-            "enum": [
-              "Violet",
-              "Indigo",
-              "Blue",
-              "Green",
-              "Yellow",
-              "Orrange",
-              "Red"
-            ]
-          },
-          "seoMeta": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "metaTitle": {
-                "type": "string",
-                "maxLength": 60
-              },
-              "metaDescription": {
-                "type": "string",
-                "maxLength": 160
-              },
-              "ogImage": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "booking": {
-            "type": "object",
-            "required": [
-              "id",
-              "url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "contactName": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "integer"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3236,12 +3236,6 @@
           "description": {
             "type": "string"
           },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "badgeText": {
             "type": "string"
           },
@@ -3385,6 +3379,12 @@
               "contactNumber": {
                 "type": "integer"
               }
+            }
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "published_at": {
@@ -4280,12 +4280,6 @@
                       "image": {
                         "type": "string"
                       },
-                      "reviews": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      },
                       "badgeText": {
                         "type": "string"
                       },
@@ -4327,6 +4321,12 @@
                       },
                       "booking": {
                         "type": "component"
+                      },
+                      "reviews": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"
@@ -4585,12 +4585,6 @@
                       "image": {
                         "type": "string"
                       },
-                      "reviews": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      },
                       "badgeText": {
                         "type": "string"
                       },
@@ -4632,6 +4626,12 @@
                       },
                       "booking": {
                         "type": "component"
+                      },
+                      "reviews": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"
@@ -4999,12 +4999,6 @@
               "image": {
                 "type": "string"
               },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "badgeText": {
                 "type": "string"
               },
@@ -5046,6 +5040,12 @@
               },
               "booking": {
                 "type": "component"
+              },
+              "reviews": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
