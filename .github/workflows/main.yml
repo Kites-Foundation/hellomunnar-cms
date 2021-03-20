@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy to staging environment 
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to staging server
+        uses: Kites-Foundation/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd ~/hellomunnar-cms/
+            docker-compose up -d --build --remove-orphans
