@@ -10327,7 +10327,7 @@ strapi-provider-email-sendmail@3.5.3:
 
 "strapi-provider-upload-aws-s3@git+https://github.com/Kites-Foundation/strapi-provider-upload-aws-s3-cdn.git":
   version "3.5.3"
-  resolved "git+https://github.com/Kites-Foundation/strapi-provider-upload-aws-s3-cdn.git#53943b28c2868ad06cdeaa9b3102913e5335428e"
+  resolved "git+https://github.com/Kites-Foundation/strapi-provider-upload-aws-s3-cdn.git#73cca6e25260a857dd066284e137163cc1fb2130"
   dependencies:
     aws-sdk "2.857.0"
     lodash "4.17.20"
