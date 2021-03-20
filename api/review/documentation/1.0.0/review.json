@@ -724,11 +724,14 @@
               "mainImage": {
                 "type": "string"
               },
-              "floaraAndFauna": {
-                "type": "component"
-              },
               "seoMeta": {
                 "type": "component"
+              },
+              "flora_and_faunas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"

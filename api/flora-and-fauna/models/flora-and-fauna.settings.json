@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flora_and_faunas",
+  "info": {
+    "name": "FloraAndFauna"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "mainImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "thumbnailImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "badgeText": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -82,15 +82,13 @@
       "plugin": "upload",
       "required": false
     },
-    "floaraAndFauna": {
-      "type": "component",
-      "repeatable": true,
-      "component": "collection-type-components.floara-and-fauna"
-    },
     "seoMeta": {
       "type": "component",
       "repeatable": true,
       "component": "common.seo"
+    },
+    "flora_and_faunas": {
+      "collection": "flora-and-fauna"
     }
   }
 }

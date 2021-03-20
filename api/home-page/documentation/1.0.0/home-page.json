@@ -414,11 +414,14 @@
                       "mainImage": {
                         "type": "string"
                       },
-                      "floaraAndFauna": {
-                        "type": "component"
-                      },
                       "seoMeta": {
                         "type": "component"
+                      },
+                      "flora_and_faunas": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"
@@ -442,6 +445,99 @@
                     "Carousel",
                     "Story"
                   ]
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "description",
+                      "mainImage",
+                      "thumbnailImage",
+                      "badgeText",
+                      "daysAvailable",
+                      "timeAvailable",
+                      "mapUrl",
+                      "slug",
+                      "reviewAverage",
+                      "reviewsCount"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "mainImage": {
+                        "type": "string"
+                      },
+                      "thumbnailImage": {
+                        "type": "string"
+                      },
+                      "reviews": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "badgeText": {
+                        "type": "string"
+                      },
+                      "daysAvailable": {
+                        "type": "string"
+                      },
+                      "timeAvailable": {
+                        "type": "string"
+                      },
+                      "mapUrl": {
+                        "type": "string"
+                      },
+                      "slug": {
+                        "type": "uid"
+                      },
+                      "reviewAverage": {
+                        "type": "number"
+                      },
+                      "reviewsCount": {
+                        "type": "integer"
+                      },
+                      "cost": {
+                        "type": "string"
+                      },
+                      "route": {
+                        "type": "string",
+                        "enum": [
+                          "Violet",
+                          "Indigo",
+                          "Blue",
+                          "Green",
+                          "Yellow",
+                          "Orrange",
+                          "Red"
+                        ]
+                      },
+                      "seoMeta": {
+                        "type": "component"
+                      },
+                      "booking": {
+                        "type": "component"
+                      },
+                      "published_at": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -631,11 +727,14 @@
                       "mainImage": {
                         "type": "string"
                       },
-                      "floaraAndFauna": {
-                        "type": "component"
-                      },
                       "seoMeta": {
                         "type": "component"
+                      },
+                      "flora_and_faunas": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"
@@ -659,6 +758,99 @@
                     "Carousel",
                     "Story"
                   ]
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "required": [
+                      "id",
+                      "name",
+                      "description",
+                      "mainImage",
+                      "thumbnailImage",
+                      "badgeText",
+                      "daysAvailable",
+                      "timeAvailable",
+                      "mapUrl",
+                      "slug",
+                      "reviewAverage",
+                      "reviewsCount"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "mainImage": {
+                        "type": "string"
+                      },
+                      "thumbnailImage": {
+                        "type": "string"
+                      },
+                      "reviews": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "badgeText": {
+                        "type": "string"
+                      },
+                      "daysAvailable": {
+                        "type": "string"
+                      },
+                      "timeAvailable": {
+                        "type": "string"
+                      },
+                      "mapUrl": {
+                        "type": "string"
+                      },
+                      "slug": {
+                        "type": "uid"
+                      },
+                      "reviewAverage": {
+                        "type": "number"
+                      },
+                      "reviewsCount": {
+                        "type": "integer"
+                      },
+                      "cost": {
+                        "type": "string"
+                      },
+                      "route": {
+                        "type": "string",
+                        "enum": [
+                          "Violet",
+                          "Indigo",
+                          "Blue",
+                          "Green",
+                          "Yellow",
+                          "Orrange",
+                          "Red"
+                        ]
+                      },
+                      "seoMeta": {
+                        "type": "component"
+                      },
+                      "booking": {
+                        "type": "component"
+                      },
+                      "published_at": {
+                        "type": "string"
+                      },
+                      "created_by": {
+                        "type": "string"
+                      },
+                      "updated_by": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 }
               }
             }
