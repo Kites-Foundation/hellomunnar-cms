@@ -3,7 +3,7 @@
 name: Deploy to staging environment
 on:
   push:
-    branches: [ master ]
+    branches: [ staging ]
   workflow_dispatch:
 jobs:
   deploy:
@@ -20,5 +20,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ~/hellomunnar-cms/
+            docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+            docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
             git pull
             docker-compose up -d --build --remove-orphans
