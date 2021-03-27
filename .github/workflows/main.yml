@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: staging
     steps:
       - name: Deploy to staging server
         uses: Kites-Foundation/ssh-action@master
