@@ -7,21 +7,13 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted,staging-strapi]
     environment: staging
     steps:
+      - uses: actions/checkout@v2
       - name: Deploy to staging server
-        uses: Kites-Foundation/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          command_timeout: "1h"
-          timeout: "1h"
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            cd ~/hellomunnar-cms/
-            docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-            docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
-            git pull
-            docker-compose up -d --build --remove-orphans
+        run: |
+          cp ${{secrets.STRAPI_ENV_PATH}} ./.env
+          docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+          docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+          docker-compose up -d --build --remove-orphans
