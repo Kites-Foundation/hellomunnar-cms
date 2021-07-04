@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Deploy to staging environment
 on:
   push:
@@ -11,9 +9,11 @@ jobs:
     environment: staging
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy to staging server
+      - name: Copy Env file
+        run: cp ${{secrets.STRAPI_ENV_PATH}} ./.env
+      - name: Remove old stale images
         run: |
-          cp ${{secrets.STRAPI_ENV_PATH}} ./.env
           docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null || true
           docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null || true
-          docker-compose up -d --build --remove-orphans
+      - name: Deploy the latest version
+        run: docker-compose up -d --build --remove-orphans
