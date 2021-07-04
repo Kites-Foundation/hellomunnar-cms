@@ -17,7 +17,7 @@ services:
     env_file:
         - ".env"
     volumes:
-      - ./docker-data/database-data:/var/lib/postgresql/data/
+      - ~/hellomunnar-data/database-data:/var/lib/postgresql/data/
     networks:
       - strapi-app-network
 networks:
