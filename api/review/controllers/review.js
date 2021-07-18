@@ -17,13 +17,13 @@ module.exports = {
     if (ctx.is("multipart")) {
       const { data, files } = parseMultipartData(ctx);
 
-      if (data?.activity) {
-        hasReviewedFilter.activity = data?.activity;
+      if (data?.thingsToDo) {
+        hasReviewedFilter.thingsToDo = data?.thingsToDo;
       } else if (data?.destination) {
         hasReviewedFilter.destination = data?.destination;
       } else {
         return ctx.badRequest(null, [
-          { messages: [{ id: "Activity or destination must be given" }] },
+          { messages: [{ id: "thingsToDo or destination must be given" }] },
         ]);
       }
 
@@ -42,13 +42,13 @@ module.exports = {
     } else {
       const req = ctx.request.body;
 
-      if (req?.activity) {
-        hasReviewedFilter.activity = req.activity;
+      if (req?.thingsToDo) {
+        hasReviewedFilter.thingsToDo = req.thingsToDo;
       } else if (req?.destination) {
         hasReviewedFilter.destination = req.destination;
       } else {
         return ctx.badRequest(null, [
-          { messages: [{ id: "Activity or destination must be given" }] },
+          { messages: [{ id: "thingsToDo or destination must be given" }] },
         ]);
       }
 
@@ -83,17 +83,17 @@ module.exports = {
     if (ctx.is("multipart")) {
       const { data, files } = parseMultipartData(ctx);
       data.user = ctx.state.user.id;
-      // updatating destination and activity not allowed
+      // updatating destination and thingsToDo not allowed
       delete data?.destination;
-      delete data?.activity;
+      delete data?.thingsToDo;
       entity = await strapi.services.review.update({ id }, data, {
         files,
       });
     } else {
       ctx.request.body.user = ctx.state.user.id;
-      // updatating destination and activity not allowed
+      // updatating destination and thingsToDo not allowed
       delete ctx.request.body?.destination;
-      delete ctx.request.body?.activity;
+      delete ctx.request.body?.thingsToDo;
       entity = await strapi.services.review.update({ id }, ctx.request.body);
     }
 
