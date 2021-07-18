@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/features": {
+    "/challenges": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Feature"
+                    "$ref": "#/components/schemas/Challenge"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Feature"
+          "Challenge"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Feature"
+                  "$ref": "#/components/schemas/Challenge"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Feature"
+          "Challenge"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFeature"
+                "$ref": "#/components/schemas/NewChallenge"
               }
             }
           }
         }
       }
     },
-    "/features/count": {
+    "/challenges/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Feature"
+          "Challenge"
         ],
         "parameters": []
       }
     },
-    "/features/{id}": {
+    "/challenges/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Feature"
+                  "$ref": "#/components/schemas/Challenge"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Feature"
+          "Challenge"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Feature"
+                  "$ref": "#/components/schemas/Challenge"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Feature"
+          "Challenge"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFeature"
+                "$ref": "#/components/schemas/NewChallenge"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Feature"
+          "Challenge"
         ],
         "parameters": [
           {
@@ -514,21 +514,18 @@
   },
   "components": {
     "schemas": {
-      "Feature": {
+      "Challenge": {
         "required": [
-          "id",
-          "featureName",
-          "featureIcon",
-          "featureUrl"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "featureName": {
+          "name": {
             "type": "string"
           },
-          "featureIcon": {
+          "icon": {
             "required": [
               "id",
               "name",
@@ -595,24 +592,20 @@
               }
             }
           },
-          "featureUrl": {
+          "published_at": {
             "type": "string",
-            "default": "#"
+            "format": "date-time"
           }
         }
       },
-      "NewFeature": {
-        "required": [
-          "featureName",
-          "featureUrl"
-        ],
+      "NewChallenge": {
         "properties": {
-          "featureName": {
+          "name": {
             "type": "string"
           },
-          "featureUrl": {
+          "published_at": {
             "type": "string",
-            "default": "#"
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -626,7 +619,7 @@
   },
   "tags": [
     {
-      "name": "Feature"
+      "name": "Challenge"
     }
   ]
 }

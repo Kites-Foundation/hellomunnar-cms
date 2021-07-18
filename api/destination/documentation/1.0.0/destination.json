@@ -616,37 +616,6 @@
             "type": "integer",
             "default": 0
           },
-          "features": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "featureName",
-                "featureIcon",
-                "featureUrl"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "featureName": {
-                  "type": "string"
-                },
-                "featureIcon": {
-                  "type": "string"
-                },
-                "featureUrl": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "image": {
             "required": [
               "id",
@@ -900,12 +869,6 @@
           "reviewsCount": {
             "type": "integer",
             "default": 0
-          },
-          "features": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "seoMeta": {
             "type": "array",

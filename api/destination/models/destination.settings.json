@@ -61,9 +61,6 @@
       "default": 0,
       "required": true
     },
-    "features": {
-      "collection": "feature"
-    },
     "image": {
       "model": "file",
       "via": "related",
