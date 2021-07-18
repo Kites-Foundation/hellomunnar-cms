@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/18/2021 9:01:42 PM"
+    "x-generation-date": "07/18/2021 9:21:20 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4837,7 +4837,11 @@
                   "type": "array",
                   "items": {
                     "required": [
-                      "id"
+                      "id",
+                      "route",
+                      "name",
+                      "difficultyLevel",
+                      "type"
                     ],
                     "properties": {
                       "id": {
@@ -4845,9 +4849,6 @@
                       },
                       "route": {
                         "type": "component"
-                      },
-                      "type": {
-                        "type": "string"
                       },
                       "name": {
                         "type": "string"
@@ -4892,6 +4893,29 @@
                         "items": {
                           "type": "string"
                         }
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "Trekking",
+                          "Boating",
+                          "SiteSeeing",
+                          "Camping",
+                          "Cycling",
+                          "Wildlife",
+                          "RockClimbing",
+                          "Photography",
+                          "Landscape",
+                          "SunriseSunset",
+                          "TeaPlantationFarming",
+                          "Festivals",
+                          "Heritage",
+                          "ThemePark",
+                          "Shopping",
+                          "Fooding",
+                          "Adventure",
+                          "Safari"
+                        ]
                       },
                       "published_at": {
                         "type": "string"
@@ -5125,7 +5149,11 @@
                   "type": "array",
                   "items": {
                     "required": [
-                      "id"
+                      "id",
+                      "route",
+                      "name",
+                      "difficultyLevel",
+                      "type"
                     ],
                     "properties": {
                       "id": {
@@ -5133,9 +5161,6 @@
                       },
                       "route": {
                         "type": "component"
-                      },
-                      "type": {
-                        "type": "string"
                       },
                       "name": {
                         "type": "string"
@@ -5180,6 +5205,29 @@
                         "items": {
                           "type": "string"
                         }
+                      },
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "Trekking",
+                          "Boating",
+                          "SiteSeeing",
+                          "Camping",
+                          "Cycling",
+                          "Wildlife",
+                          "RockClimbing",
+                          "Photography",
+                          "Landscape",
+                          "SunriseSunset",
+                          "TeaPlantationFarming",
+                          "Festivals",
+                          "Heritage",
+                          "ThemePark",
+                          "Shopping",
+                          "Fooding",
+                          "Adventure",
+                          "Safari"
+                        ]
                       },
                       "published_at": {
                         "type": "string"
@@ -5849,7 +5897,11 @@
           },
           "thingsToDo": {
             "required": [
-              "id"
+              "id",
+              "route",
+              "name",
+              "difficultyLevel",
+              "type"
             ],
             "properties": {
               "id": {
@@ -5857,9 +5909,6 @@
               },
               "route": {
                 "type": "component"
-              },
-              "type": {
-                "type": "string"
               },
               "name": {
                 "type": "string"
@@ -5904,6 +5953,29 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Trekking",
+                  "Boating",
+                  "SiteSeeing",
+                  "Camping",
+                  "Cycling",
+                  "Wildlife",
+                  "RockClimbing",
+                  "Photography",
+                  "Landscape",
+                  "SunriseSunset",
+                  "TeaPlantationFarming",
+                  "Festivals",
+                  "Heritage",
+                  "ThemePark",
+                  "Shopping",
+                  "Fooding",
+                  "Adventure",
+                  "Safari"
+                ]
               },
               "published_at": {
                 "type": "string"
@@ -5963,7 +6035,11 @@
       },
       "Things-to-do": {
         "required": [
-          "id"
+          "id",
+          "route",
+          "name",
+          "difficultyLevel",
+          "type"
         ],
         "properties": {
           "id": {
@@ -5991,9 +6067,6 @@
                 ]
               }
             }
-          },
-          "type": {
-            "type": "string"
           },
           "name": {
             "type": "string"
@@ -6205,6 +6278,29 @@
               }
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Trekking",
+              "Boating",
+              "SiteSeeing",
+              "Camping",
+              "Cycling",
+              "Wildlife",
+              "RockClimbing",
+              "Photography",
+              "Landscape",
+              "SunriseSunset",
+              "TeaPlantationFarming",
+              "Festivals",
+              "Heritage",
+              "ThemePark",
+              "Shopping",
+              "Fooding",
+              "Adventure",
+              "Safari"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -6212,6 +6308,12 @@
         }
       },
       "NewThings-to-do": {
+        "required": [
+          "route",
+          "name",
+          "difficultyLevel",
+          "type"
+        ],
         "properties": {
           "route": {
             "type": "object",
@@ -6235,9 +6337,6 @@
                 ]
               }
             }
-          },
-          "type": {
-            "type": "string"
           },
           "name": {
             "type": "string"
@@ -6334,6 +6433,29 @@
             "items": {
               "type": "string"
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Trekking",
+              "Boating",
+              "SiteSeeing",
+              "Camping",
+              "Cycling",
+              "Wildlife",
+              "RockClimbing",
+              "Photography",
+              "Landscape",
+              "SunriseSunset",
+              "TeaPlantationFarming",
+              "Festivals",
+              "Heritage",
+              "ThemePark",
+              "Shopping",
+              "Fooding",
+              "Adventure",
+              "Safari"
+            ]
           },
           "published_at": {
             "type": "string",

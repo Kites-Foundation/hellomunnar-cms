@@ -529,7 +529,11 @@
     "schemas": {
       "Things-to-do": {
         "required": [
-          "id"
+          "id",
+          "route",
+          "name",
+          "difficultyLevel",
+          "type"
         ],
         "properties": {
           "id": {
@@ -557,9 +561,6 @@
                 ]
               }
             }
-          },
-          "type": {
-            "type": "string"
           },
           "name": {
             "type": "string"
@@ -771,6 +772,29 @@
               }
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Trekking",
+              "Boating",
+              "SiteSeeing",
+              "Camping",
+              "Cycling",
+              "Wildlife",
+              "RockClimbing",
+              "Photography",
+              "Landscape",
+              "SunriseSunset",
+              "TeaPlantationFarming",
+              "Festivals",
+              "Heritage",
+              "ThemePark",
+              "Shopping",
+              "Fooding",
+              "Adventure",
+              "Safari"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -778,6 +802,12 @@
         }
       },
       "NewThings-to-do": {
+        "required": [
+          "route",
+          "name",
+          "difficultyLevel",
+          "type"
+        ],
         "properties": {
           "route": {
             "type": "object",
@@ -801,9 +831,6 @@
                 ]
               }
             }
-          },
-          "type": {
-            "type": "string"
           },
           "name": {
             "type": "string"
@@ -900,6 +927,29 @@
             "items": {
               "type": "string"
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Trekking",
+              "Boating",
+              "SiteSeeing",
+              "Camping",
+              "Cycling",
+              "Wildlife",
+              "RockClimbing",
+              "Photography",
+              "Landscape",
+              "SunriseSunset",
+              "TeaPlantationFarming",
+              "Festivals",
+              "Heritage",
+              "ThemePark",
+              "Shopping",
+              "Fooding",
+              "Adventure",
+              "Safari"
+            ]
           },
           "published_at": {
             "type": "string",

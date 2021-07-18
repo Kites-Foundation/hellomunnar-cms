@@ -743,7 +743,11 @@
           },
           "thingsToDo": {
             "required": [
-              "id"
+              "id",
+              "route",
+              "name",
+              "difficultyLevel",
+              "type"
             ],
             "properties": {
               "id": {
@@ -751,9 +755,6 @@
               },
               "route": {
                 "type": "component"
-              },
-              "type": {
-                "type": "string"
               },
               "name": {
                 "type": "string"
@@ -798,6 +799,29 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "Trekking",
+                  "Boating",
+                  "SiteSeeing",
+                  "Camping",
+                  "Cycling",
+                  "Wildlife",
+                  "RockClimbing",
+                  "Photography",
+                  "Landscape",
+                  "SunriseSunset",
+                  "TeaPlantationFarming",
+                  "Festivals",
+                  "Heritage",
+                  "ThemePark",
+                  "Shopping",
+                  "Fooding",
+                  "Adventure",
+                  "Safari"
+                ]
               },
               "published_at": {
                 "type": "string"

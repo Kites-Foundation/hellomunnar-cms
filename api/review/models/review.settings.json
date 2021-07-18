@@ -45,8 +45,8 @@
       "model": "destination"
     },
     "thingsToDo": {
-      "model": "things-to-do",
-      "via": "reviews"
+      "via": "reviews",
+      "model": "things-to-do"
     },
     "date": {
       "type": "datetime",

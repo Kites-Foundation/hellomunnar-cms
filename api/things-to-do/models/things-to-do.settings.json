@@ -14,13 +14,12 @@
     "route": {
       "type": "component",
       "repeatable": false,
-      "component": "common.route"
-    },
-    "type": {
-      "type": "string"
+      "component": "common.route",
+      "required": true
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text"
@@ -59,7 +58,8 @@
         "Challenging",
         "Adventure",
         "Easy"
-      ]
+      ],
+      "required": true
     },
     "price": {
       "type": "string"
@@ -72,6 +72,30 @@
     "reviews": {
       "via": "thingsToDo",
       "collection": "review"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Trekking",
+        "Boating",
+        "SiteSeeing",
+        "Camping",
+        "Cycling",
+        "Wildlife",
+        "RockClimbing",
+        "Photography",
+        "Landscape",
+        "SunriseSunset",
+        "TeaPlantationFarming",
+        "Festivals",
+        "Heritage",
+        "ThemePark",
+        "Shopping",
+        "Fooding",
+        "Adventure",
+        "Safari"
+      ],
+      "required": true
     }
   }
 }
