@@ -26,7 +26,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "published": {
       "type": "boolean",
@@ -46,6 +47,10 @@
     "activity": {
       "via": "reviews",
       "model": "activity"
+    },
+    "things_to_do": {
+      "model": "things-to-do",
+      "via": "reviews"
     }
   }
 }

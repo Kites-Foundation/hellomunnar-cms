@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "things_to_dos",
+  "info": {
+    "name": "thingsToDo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "route": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.route"
+    },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "location": {
+      "type": "component",
+      "repeatable": true,
+      "component": "collection-type-components.location"
+    },
+    "openTime": {
+      "type": "time"
+    },
+    "closingTime": {
+      "type": "time"
+    },
+    "challenges": {
+      "type": "component",
+      "repeatable": true,
+      "component": "collection-type-components.challenges"
+    },
+    "difficultyLevel": {
+      "type": "enumeration",
+      "enum": [
+        "Challenging",
+        "Adventure",
+        "Easy"
+      ]
+    },
+    "price": {
+      "type": "string"
+    },
+    "booking": {
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.booking"
+    },
+    "reviews": {
+      "via": "things_to_do",
+      "collection": "review"
+    }
+  }
+}

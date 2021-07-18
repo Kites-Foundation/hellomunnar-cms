@@ -567,6 +567,9 @@
                 "activity": {
                   "type": "string"
                 },
+                "things_to_do": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },

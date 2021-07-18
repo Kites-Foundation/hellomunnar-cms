@@ -23,7 +23,7 @@
       "required": true,
       "default": 0
     },
-    "rail_type": {
+    "railType": {
       "type": "enumeration",
       "enum": [
         "Carousel",

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/reviews": {
+    "/things-to-dos": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Review"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Things-to-do"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Review"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewReview"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/reviews/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Things-to-do"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewThings-to-do"
+              }
+            }
+          }
+        }
       }
     },
-    "/reviews/{id}": {
+    "/things-to-dos/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Things-to-do"
+        ],
+        "parameters": []
+      }
+    },
+    "/things-to-dos/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Things-to-do"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Things-to-do"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewReview"
+                "$ref": "#/components/schemas/NewThings-to-do"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Things-to-do"
         ],
         "parameters": [
           {
@@ -514,18 +527,41 @@
   },
   "components": {
     "schemas": {
-      "Review": {
+      "Things-to-do": {
         "required": [
-          "id",
-          "title",
-          "description",
-          "published"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "route": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "routeName": {
+                "type": "string",
+                "enum": [
+                  "Violet",
+                  "Indigo",
+                  "Blue",
+                  "Green",
+                  "Yellow",
+                  "Orrange",
+                  "Red"
+                ]
+              }
+            }
+          },
+          "type": {
+            "type": "string"
+          },
+          "name": {
             "type": "string"
           },
           "description": {
@@ -601,197 +637,157 @@
               }
             }
           },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
+          "location": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "latitude",
+                "longitude"
+              ],
+              "properties": {
+                "id": {
                   "type": "string"
+                },
+                "locationName": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
                 }
-              },
-              "favourites": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
-          "destination": {
-            "required": [
-              "id",
-              "title",
-              "description",
-              "mapUrl",
-              "reviewAverage",
-              "reviewsCount"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
+          "openTime": {
+            "type": "string"
+          },
+          "closingTime": {
+            "type": "string"
+          },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
                   "type": "string"
                 }
-              },
-              "description": {
-                "type": "string"
-              },
-              "mapUrl": {
-                "type": "string"
-              },
-              "reviewAverage": {
-                "type": "number"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "route": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red",
-                  "NoRoute"
-                ]
-              },
-              "daysAvailable": {
-                "type": "string"
-              },
-              "timeAvailable": {
-                "type": "string"
-              },
-              "reviewsCount": {
-                "type": "integer"
-              },
-              "features": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "image": {
-                "type": "string"
-              },
-              "seoMeta": {
-                "type": "component"
-              },
-              "flora_and_faunas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
-          "activity": {
+          "difficultyLevel": {
+            "type": "string",
+            "enum": [
+              "Challenging",
+              "Adventure",
+              "Easy"
+            ]
+          },
+          "price": {
+            "type": "string"
+          },
+          "booking": {
+            "type": "object",
             "required": [
               "id",
-              "name",
-              "description",
-              "image",
-              "badgeText",
-              "daysAvailable",
-              "timeAvailable",
-              "mapUrl",
-              "slug",
-              "reviewAverage",
-              "reviewsCount"
+              "url"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "url": {
                 "type": "string"
               },
-              "description": {
+              "contactName": {
                 "type": "string"
               },
-              "image": {
-                "type": "string"
-              },
-              "badgeText": {
-                "type": "string"
-              },
-              "daysAvailable": {
-                "type": "string"
-              },
-              "timeAvailable": {
-                "type": "string"
-              },
-              "mapUrl": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "reviewAverage": {
-                "type": "number"
-              },
-              "reviewsCount": {
+              "contactNumber": {
                 "type": "integer"
-              },
-              "cost": {
+              }
+            }
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "title",
+                "description",
+                "published"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published": {
+                  "type": "boolean"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "destination": {
+                  "type": "string"
+                },
+                "activity": {
+                  "type": "string"
+                },
+                "things_to_do": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewThings-to-do": {
+        "properties": {
+          "route": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
                 "type": "string"
               },
-              "route": {
+              "routeName": {
                 "type": "string",
                 "enum": [
                   "Violet",
@@ -802,129 +798,111 @@
                   "Orrange",
                   "Red"
                 ]
-              },
-              "seoMeta": {
-                "type": "component"
-              },
-              "booking": {
-                "type": "component"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
               }
             }
           },
-          "things_to_do": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "route": {
-                "type": "component"
-              },
-              "type": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "location": {
-                "type": "component"
-              },
-              "openTime": {
-                "type": "string"
-              },
-              "closingTime": {
-                "type": "string"
-              },
-              "challenges": {
-                "type": "component"
-              },
-              "difficultyLevel": {
-                "type": "string",
-                "enum": [
-                  "Challenging",
-                  "Adventure",
-                  "Easy"
-                ]
-              },
-              "price": {
-                "type": "string"
-              },
-              "booking": {
-                "type": "component"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      },
-      "NewReview": {
-        "required": [
-          "title",
-          "description",
-          "published"
-        ],
-        "properties": {
-          "title": {
+          "type": {
+            "type": "string"
+          },
+          "name": {
             "type": "string"
           },
           "description": {
             "type": "string"
           },
-          "published": {
-            "type": "boolean",
-            "default": false
+          "location": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "latitude",
+                "longitude"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "locationName": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                }
+              }
+            }
           },
-          "user": {
+          "openTime": {
             "type": "string"
           },
-          "destination": {
+          "closingTime": {
             "type": "string"
           },
-          "activity": {
+          "challenges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "difficultyLevel": {
+            "type": "string",
+            "enum": [
+              "Challenging",
+              "Adventure",
+              "Easy"
+            ]
+          },
+          "price": {
             "type": "string"
           },
-          "things_to_do": {
-            "type": "string"
+          "booking": {
+            "type": "object",
+            "required": [
+              "id",
+              "url"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "contactName": {
+                "type": "string"
+              },
+              "contactNumber": {
+                "type": "integer"
+              }
+            }
+          },
+          "reviews": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -936,9 +914,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Review"
-    }
-  ]
+  "tags": []
 }

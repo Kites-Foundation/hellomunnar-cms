@@ -334,7 +334,7 @@
                 "id",
                 "title",
                 "order",
-                "rail_type"
+                "railType"
               ],
               "properties": {
                 "id": {
@@ -435,7 +435,7 @@
                   "type": "integer",
                   "default": 0
                 },
-                "rail_type": {
+                "railType": {
                   "type": "string",
                   "enum": [
                     "Carousel",
@@ -639,7 +639,7 @@
                 "id",
                 "title",
                 "order",
-                "rail_type"
+                "railType"
               ],
               "properties": {
                 "id": {
@@ -740,7 +740,7 @@
                   "type": "integer",
                   "default": 0
                 },
-                "rail_type": {
+                "railType": {
                   "type": "string",
                   "enum": [
                     "Carousel",
