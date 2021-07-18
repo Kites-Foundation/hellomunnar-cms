@@ -70,7 +70,7 @@
       "component": "collection-type-components.booking"
     },
     "reviews": {
-      "via": "things_to_do",
+      "via": "thingsToDo",
       "collection": "review"
     }
   }

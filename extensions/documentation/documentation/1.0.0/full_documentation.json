@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/18/2021 8:41:59 PM"
+    "x-generation-date": "07/18/2021 9:01:42 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -46,517 +46,6 @@
     }
   ],
   "paths": {
-    "/activities": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Activity"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Activity"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Activity"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Activity"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewActivity"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/activities/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Activity"
-        ],
-        "parameters": []
-      }
-    },
-    "/activities/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Activity"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Activity"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Activity"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Activity"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewActivity"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a record",
-        "responses": {
-          "200": {
-            "description": "deletes a single record based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Activity"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
     "/destinations": {
       "get": {
         "deprecated": false,
@@ -4488,479 +3977,6 @@
   },
   "components": {
     "schemas": {
-      "Activity": {
-        "required": [
-          "id",
-          "name",
-          "description",
-          "image",
-          "badgeText",
-          "daysAvailable",
-          "timeAvailable",
-          "mapUrl",
-          "slug",
-          "reviewAverage",
-          "reviewsCount"
-        ],
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "badgeText": {
-            "type": "string"
-          },
-          "daysAvailable": {
-            "type": "string"
-          },
-          "timeAvailable": {
-            "type": "string"
-          },
-          "mapUrl": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "reviewAverage": {
-            "type": "number",
-            "default": 0
-          },
-          "reviewsCount": {
-            "type": "integer",
-            "default": 0
-          },
-          "cost": {
-            "type": "string"
-          },
-          "route": {
-            "type": "string",
-            "enum": [
-              "Violet",
-              "Indigo",
-              "Blue",
-              "Green",
-              "Yellow",
-              "Orrange",
-              "Red"
-            ]
-          },
-          "seoMeta": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "metaTitle": {
-                "type": "string",
-                "maxLength": 60
-              },
-              "metaDescription": {
-                "type": "string",
-                "maxLength": 160
-              },
-              "ogImage": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "booking": {
-            "type": "object",
-            "required": [
-              "id",
-              "url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "contactName": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "integer"
-              }
-            }
-          },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "published"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published": {
-                  "type": "boolean"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "destination": {
-                  "type": "string"
-                },
-                "activity": {
-                  "type": "string"
-                },
-                "things_to_do": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "NewActivity": {
-        "required": [
-          "name",
-          "description",
-          "badgeText",
-          "daysAvailable",
-          "timeAvailable",
-          "mapUrl",
-          "slug",
-          "reviewAverage",
-          "reviewsCount"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "badgeText": {
-            "type": "string"
-          },
-          "daysAvailable": {
-            "type": "string"
-          },
-          "timeAvailable": {
-            "type": "string"
-          },
-          "mapUrl": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "reviewAverage": {
-            "type": "number",
-            "default": 0
-          },
-          "reviewsCount": {
-            "type": "integer",
-            "default": 0
-          },
-          "cost": {
-            "type": "string"
-          },
-          "route": {
-            "type": "string",
-            "enum": [
-              "Violet",
-              "Indigo",
-              "Blue",
-              "Green",
-              "Yellow",
-              "Orrange",
-              "Red"
-            ]
-          },
-          "seoMeta": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "metaTitle": {
-                "type": "string",
-                "maxLength": 60
-              },
-              "metaDescription": {
-                "type": "string",
-                "maxLength": 160
-              },
-              "ogImage": {
-                "required": [
-                  "id",
-                  "name",
-                  "hash",
-                  "mime",
-                  "size",
-                  "url",
-                  "provider"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "alternativeText": {
-                    "type": "string"
-                  },
-                  "caption": {
-                    "type": "string"
-                  },
-                  "width": {
-                    "type": "integer"
-                  },
-                  "height": {
-                    "type": "integer"
-                  },
-                  "formats": {
-                    "type": "object"
-                  },
-                  "hash": {
-                    "type": "string"
-                  },
-                  "ext": {
-                    "type": "string"
-                  },
-                  "mime": {
-                    "type": "string"
-                  },
-                  "size": {
-                    "type": "number"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "previewUrl": {
-                    "type": "string"
-                  },
-                  "provider": {
-                    "type": "string"
-                  },
-                  "provider_metadata": {
-                    "type": "object"
-                  },
-                  "related": {
-                    "type": "string"
-                  },
-                  "created_by": {
-                    "type": "string"
-                  },
-                  "updated_by": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "booking": {
-            "type": "object",
-            "required": [
-              "id",
-              "url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "contactName": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "integer"
-              }
-            }
-          },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "created_by": {
-            "type": "string"
-          },
-          "updated_by": {
-            "type": "string"
-          }
-        }
-      },
       "Destination": {
         "required": [
           "id",
@@ -4984,7 +4000,8 @@
                 "id",
                 "title",
                 "description",
-                "published"
+                "published",
+                "date"
               ],
               "properties": {
                 "id": {
@@ -5011,10 +4028,10 @@
                 "destination": {
                   "type": "string"
                 },
-                "activity": {
+                "thingsToDo": {
                   "type": "string"
                 },
-                "things_to_do": {
+                "date": {
                   "type": "string"
                 },
                 "created_by": {
@@ -5717,6 +4734,17 @@
                 "title": {
                   "type": "string"
                 },
+                "order": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "railType": {
+                  "type": "string",
+                  "enum": [
+                    "Carousel",
+                    "Story"
+                  ]
+                },
                 "destinations": {
                   "type": "array",
                   "items": {
@@ -5805,35 +4833,20 @@
                     }
                   }
                 },
-                "order": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "railType": {
-                  "type": "string",
-                  "enum": [
-                    "Carousel",
-                    "Story"
-                  ]
-                },
-                "activities": {
+                "thingsToDo": {
                   "type": "array",
                   "items": {
                     "required": [
-                      "id",
-                      "name",
-                      "description",
-                      "image",
-                      "badgeText",
-                      "daysAvailable",
-                      "timeAvailable",
-                      "mapUrl",
-                      "slug",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "id"
                     ],
                     "properties": {
                       "id": {
+                        "type": "string"
+                      },
+                      "route": {
+                        "type": "component"
+                      },
+                      "type": {
                         "type": "string"
                       },
                       "name": {
@@ -5842,47 +4855,34 @@
                       "description": {
                         "type": "string"
                       },
-                      "image": {
+                      "images": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "location": {
+                        "type": "component"
+                      },
+                      "openTime": {
                         "type": "string"
                       },
-                      "badgeText": {
+                      "closingTime": {
                         "type": "string"
                       },
-                      "daysAvailable": {
-                        "type": "string"
+                      "challenges": {
+                        "type": "component"
                       },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "mapUrl": {
-                        "type": "string"
-                      },
-                      "slug": {
-                        "type": "uid"
-                      },
-                      "reviewAverage": {
-                        "type": "number"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "cost": {
-                        "type": "string"
-                      },
-                      "route": {
+                      "difficultyLevel": {
                         "type": "string",
                         "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red"
+                          "Challenging",
+                          "Adventure",
+                          "Easy"
                         ]
                       },
-                      "seoMeta": {
-                        "type": "component"
+                      "price": {
+                        "type": "string"
                       },
                       "booking": {
                         "type": "component"
@@ -6022,6 +5022,17 @@
                 "title": {
                   "type": "string"
                 },
+                "order": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "railType": {
+                  "type": "string",
+                  "enum": [
+                    "Carousel",
+                    "Story"
+                  ]
+                },
                 "destinations": {
                   "type": "array",
                   "items": {
@@ -6110,35 +5121,20 @@
                     }
                   }
                 },
-                "order": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "railType": {
-                  "type": "string",
-                  "enum": [
-                    "Carousel",
-                    "Story"
-                  ]
-                },
-                "activities": {
+                "thingsToDo": {
                   "type": "array",
                   "items": {
                     "required": [
-                      "id",
-                      "name",
-                      "description",
-                      "image",
-                      "badgeText",
-                      "daysAvailable",
-                      "timeAvailable",
-                      "mapUrl",
-                      "slug",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "id"
                     ],
                     "properties": {
                       "id": {
+                        "type": "string"
+                      },
+                      "route": {
+                        "type": "component"
+                      },
+                      "type": {
                         "type": "string"
                       },
                       "name": {
@@ -6147,47 +5143,34 @@
                       "description": {
                         "type": "string"
                       },
-                      "image": {
+                      "images": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "location": {
+                        "type": "component"
+                      },
+                      "openTime": {
                         "type": "string"
                       },
-                      "badgeText": {
+                      "closingTime": {
                         "type": "string"
                       },
-                      "daysAvailable": {
-                        "type": "string"
+                      "challenges": {
+                        "type": "component"
                       },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "mapUrl": {
-                        "type": "string"
-                      },
-                      "slug": {
-                        "type": "uid"
-                      },
-                      "reviewAverage": {
-                        "type": "number"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "cost": {
-                        "type": "string"
-                      },
-                      "route": {
+                      "difficultyLevel": {
                         "type": "string",
                         "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red"
+                          "Challenging",
+                          "Adventure",
+                          "Easy"
                         ]
                       },
-                      "seoMeta": {
-                        "type": "component"
+                      "price": {
+                        "type": "string"
                       },
                       "booking": {
                         "type": "component"
@@ -6642,7 +5625,8 @@
           "id",
           "title",
           "description",
-          "published"
+          "published",
+          "date"
         ],
         "properties": {
           "id": {
@@ -6863,93 +5847,7 @@
               }
             }
           },
-          "activity": {
-            "required": [
-              "id",
-              "name",
-              "description",
-              "image",
-              "badgeText",
-              "daysAvailable",
-              "timeAvailable",
-              "mapUrl",
-              "slug",
-              "reviewAverage",
-              "reviewsCount"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "badgeText": {
-                "type": "string"
-              },
-              "daysAvailable": {
-                "type": "string"
-              },
-              "timeAvailable": {
-                "type": "string"
-              },
-              "mapUrl": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "reviewAverage": {
-                "type": "number"
-              },
-              "reviewsCount": {
-                "type": "integer"
-              },
-              "cost": {
-                "type": "string"
-              },
-              "route": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
-              },
-              "seoMeta": {
-                "type": "component"
-              },
-              "booking": {
-                "type": "component"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "things_to_do": {
+          "thingsToDo": {
             "required": [
               "id"
             ],
@@ -7017,6 +5915,10 @@
                 "type": "string"
               }
             }
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -7024,7 +5926,8 @@
         "required": [
           "title",
           "description",
-          "published"
+          "published",
+          "date"
         ],
         "properties": {
           "title": {
@@ -7043,11 +5946,12 @@
           "destination": {
             "type": "string"
           },
-          "activity": {
+          "thingsToDo": {
             "type": "string"
           },
-          "things_to_do": {
-            "type": "string"
+          "date": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -7258,7 +6162,8 @@
                 "id",
                 "title",
                 "description",
-                "published"
+                "published",
+                "date"
               ],
               "properties": {
                 "id": {
@@ -7285,10 +6190,10 @@
                 "destination": {
                   "type": "string"
                 },
-                "activity": {
+                "thingsToDo": {
                   "type": "string"
                 },
-                "things_to_do": {
+                "date": {
                   "type": "string"
                 },
                 "created_by": {
@@ -7467,9 +6372,6 @@
     }
   },
   "tags": [
-    {
-      "name": "Activity"
-    },
     {
       "name": "Destination"
     },

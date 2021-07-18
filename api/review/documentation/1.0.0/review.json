@@ -519,7 +519,8 @@
           "id",
           "title",
           "description",
-          "published"
+          "published",
+          "date"
         ],
         "properties": {
           "id": {
@@ -740,93 +741,7 @@
               }
             }
           },
-          "activity": {
-            "required": [
-              "id",
-              "name",
-              "description",
-              "image",
-              "badgeText",
-              "daysAvailable",
-              "timeAvailable",
-              "mapUrl",
-              "slug",
-              "reviewAverage",
-              "reviewsCount"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "image": {
-                "type": "string"
-              },
-              "badgeText": {
-                "type": "string"
-              },
-              "daysAvailable": {
-                "type": "string"
-              },
-              "timeAvailable": {
-                "type": "string"
-              },
-              "mapUrl": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "reviewAverage": {
-                "type": "number"
-              },
-              "reviewsCount": {
-                "type": "integer"
-              },
-              "cost": {
-                "type": "string"
-              },
-              "route": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
-              },
-              "seoMeta": {
-                "type": "component"
-              },
-              "booking": {
-                "type": "component"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "things_to_do": {
+          "thingsToDo": {
             "required": [
               "id"
             ],
@@ -894,6 +809,10 @@
                 "type": "string"
               }
             }
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -901,7 +820,8 @@
         "required": [
           "title",
           "description",
-          "published"
+          "published",
+          "date"
         ],
         "properties": {
           "title": {
@@ -920,11 +840,12 @@
           "destination": {
             "type": "string"
           },
-          "activity": {
+          "thingsToDo": {
             "type": "string"
           },
-          "things_to_do": {
-            "type": "string"
+          "date": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"

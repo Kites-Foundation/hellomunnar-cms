@@ -15,9 +15,6 @@
       "type": "string",
       "required": true
     },
-    "destinations": {
-      "collection": "destination"
-    },
     "order": {
       "type": "integer",
       "required": true,
@@ -31,8 +28,11 @@
       ],
       "required": true
     },
-    "activities": {
-      "collection": "activity"
+    "destinations": {
+      "collection": "destination"
+    },
+    "thingsToDo": {
+      "collection": "things-to-do"
     }
   }
 }

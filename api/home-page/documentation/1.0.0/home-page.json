@@ -343,6 +343,17 @@
                 "title": {
                   "type": "string"
                 },
+                "order": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "railType": {
+                  "type": "string",
+                  "enum": [
+                    "Carousel",
+                    "Story"
+                  ]
+                },
                 "destinations": {
                   "type": "array",
                   "items": {
@@ -431,35 +442,20 @@
                     }
                   }
                 },
-                "order": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "railType": {
-                  "type": "string",
-                  "enum": [
-                    "Carousel",
-                    "Story"
-                  ]
-                },
-                "activities": {
+                "thingsToDo": {
                   "type": "array",
                   "items": {
                     "required": [
-                      "id",
-                      "name",
-                      "description",
-                      "image",
-                      "badgeText",
-                      "daysAvailable",
-                      "timeAvailable",
-                      "mapUrl",
-                      "slug",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "id"
                     ],
                     "properties": {
                       "id": {
+                        "type": "string"
+                      },
+                      "route": {
+                        "type": "component"
+                      },
+                      "type": {
                         "type": "string"
                       },
                       "name": {
@@ -468,47 +464,34 @@
                       "description": {
                         "type": "string"
                       },
-                      "image": {
+                      "images": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "location": {
+                        "type": "component"
+                      },
+                      "openTime": {
                         "type": "string"
                       },
-                      "badgeText": {
+                      "closingTime": {
                         "type": "string"
                       },
-                      "daysAvailable": {
-                        "type": "string"
+                      "challenges": {
+                        "type": "component"
                       },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "mapUrl": {
-                        "type": "string"
-                      },
-                      "slug": {
-                        "type": "uid"
-                      },
-                      "reviewAverage": {
-                        "type": "number"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "cost": {
-                        "type": "string"
-                      },
-                      "route": {
+                      "difficultyLevel": {
                         "type": "string",
                         "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red"
+                          "Challenging",
+                          "Adventure",
+                          "Easy"
                         ]
                       },
-                      "seoMeta": {
-                        "type": "component"
+                      "price": {
+                        "type": "string"
                       },
                       "booking": {
                         "type": "component"
@@ -648,6 +631,17 @@
                 "title": {
                   "type": "string"
                 },
+                "order": {
+                  "type": "integer",
+                  "default": 0
+                },
+                "railType": {
+                  "type": "string",
+                  "enum": [
+                    "Carousel",
+                    "Story"
+                  ]
+                },
                 "destinations": {
                   "type": "array",
                   "items": {
@@ -736,35 +730,20 @@
                     }
                   }
                 },
-                "order": {
-                  "type": "integer",
-                  "default": 0
-                },
-                "railType": {
-                  "type": "string",
-                  "enum": [
-                    "Carousel",
-                    "Story"
-                  ]
-                },
-                "activities": {
+                "thingsToDo": {
                   "type": "array",
                   "items": {
                     "required": [
-                      "id",
-                      "name",
-                      "description",
-                      "image",
-                      "badgeText",
-                      "daysAvailable",
-                      "timeAvailable",
-                      "mapUrl",
-                      "slug",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "id"
                     ],
                     "properties": {
                       "id": {
+                        "type": "string"
+                      },
+                      "route": {
+                        "type": "component"
+                      },
+                      "type": {
                         "type": "string"
                       },
                       "name": {
@@ -773,47 +752,34 @@
                       "description": {
                         "type": "string"
                       },
-                      "image": {
+                      "images": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "location": {
+                        "type": "component"
+                      },
+                      "openTime": {
                         "type": "string"
                       },
-                      "badgeText": {
+                      "closingTime": {
                         "type": "string"
                       },
-                      "daysAvailable": {
-                        "type": "string"
+                      "challenges": {
+                        "type": "component"
                       },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "mapUrl": {
-                        "type": "string"
-                      },
-                      "slug": {
-                        "type": "uid"
-                      },
-                      "reviewAverage": {
-                        "type": "number"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "cost": {
-                        "type": "string"
-                      },
-                      "route": {
+                      "difficultyLevel": {
                         "type": "string",
                         "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red"
+                          "Challenging",
+                          "Adventure",
+                          "Easy"
                         ]
                       },
-                      "seoMeta": {
-                        "type": "component"
+                      "price": {
+                        "type": "string"
                       },
                       "booking": {
                         "type": "component"

@@ -537,7 +537,8 @@
                 "id",
                 "title",
                 "description",
-                "published"
+                "published",
+                "date"
               ],
               "properties": {
                 "id": {
@@ -564,10 +565,10 @@
                 "destination": {
                   "type": "string"
                 },
-                "activity": {
+                "thingsToDo": {
                   "type": "string"
                 },
-                "things_to_do": {
+                "date": {
                   "type": "string"
                 },
                 "created_by": {
