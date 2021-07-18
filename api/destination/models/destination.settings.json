@@ -71,7 +71,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "seoMeta": {
       "type": "component",

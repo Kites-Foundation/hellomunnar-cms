@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/18/2021 9:21:20 PM"
+    "x-generation-date": "07/18/2021 9:35:48 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4917,9 +4917,6 @@
                           "Safari"
                         ]
                       },
-                      "published_at": {
-                        "type": "string"
-                      },
                       "created_by": {
                         "type": "string"
                       },
@@ -5017,10 +5014,6 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -5229,9 +5222,6 @@
                           "Safari"
                         ]
                       },
-                      "published_at": {
-                        "type": "string"
-                      },
                       "created_by": {
                         "type": "string"
                       },
@@ -5329,10 +5319,6 @@
                 }
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -5565,10 +5551,6 @@
               "ATM",
               "WasteBin"
             ]
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -5655,10 +5637,6 @@
               "ATM",
               "WasteBin"
             ]
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -5976,9 +5954,6 @@
                   "Adventure",
                   "Safari"
                 ]
-              },
-              "published_at": {
-                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -6300,10 +6275,6 @@
               "Adventure",
               "Safari"
             ]
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -6456,10 +6427,6 @@
               "Adventure",
               "Safari"
             ]
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"

@@ -26,7 +26,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": true
+      "required": true,
+      "pluginOptions": {}
     },
     "featureUrl": {
       "type": "string",

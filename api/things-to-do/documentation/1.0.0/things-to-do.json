@@ -794,10 +794,6 @@
               "Adventure",
               "Safari"
             ]
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -950,10 +946,6 @@
               "Adventure",
               "Safari"
             ]
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
