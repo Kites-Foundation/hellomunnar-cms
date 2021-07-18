@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ksrtcs",
+  "info": {
+    "name": "KSRTC",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "from": {
+      "type": "string",
+      "required": true
+    },
+    "to": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "SuperFast",
+        "MinnalSuperDeluxe",
+        "SuperExpressAirBus",
+        "SuperDeluxeAirBus"
+      ],
+      "required": true,
+      "default": "SuperFast"
+    },
+    "time": {
+      "type": "time"
+    },
+    "days": {
+      "type": "string",
+      "required": true
+    },
+    "route": {
+      "type": "enumeration",
+      "enum": [
+        "Violet",
+        "Indigo",
+        "Blue",
+        "Green",
+        "Yellow",
+        "Orrange",
+        "Red"
+      ]
+    },
+    "bookingUrl": {
+      "type": "string",
+      "required": true
+    },
+    "busNumber": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
