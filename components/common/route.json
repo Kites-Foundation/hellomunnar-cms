@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_routes",
+  "info": {
+    "name": "route",
+    "icon": "road",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "routeName": {
+      "type": "enumeration",
+      "enum": [
+        "Violet",
+        "Indigo",
+        "Blue",
+        "Green",
+        "Yellow",
+        "Orrange",
+        "Red"
+      ]
+    }
+  }
+}

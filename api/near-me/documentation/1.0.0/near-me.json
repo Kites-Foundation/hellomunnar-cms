@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/ksrtcs": {
+    "/near-mes": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Ksrtc"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Ksrtc"
+          "Near-me"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ksrtc"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Ksrtc"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewKsrtc"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/ksrtcs/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Ksrtc"
+          "Near-me"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewNear-me"
+              }
+            }
+          }
+        }
       }
     },
-    "/ksrtcs/{id}": {
+    "/near-mes/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ksrtc"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Ksrtc"
+          "Near-me"
+        ],
+        "parameters": []
+      }
+    },
+    "/near-mes/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Near-me"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ksrtc"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Ksrtc"
+          "Near-me"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewKsrtc"
+                "$ref": "#/components/schemas/NewNear-me"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Ksrtc"
+          "Near-me"
         ],
         "parameters": [
           {
@@ -514,47 +527,42 @@
   },
   "components": {
     "schemas": {
-      "Ksrtc": {
+      "Near-me": {
         "required": [
           "id",
-          "from",
-          "to",
-          "type",
-          "days",
-          "bookingUrl",
-          "busNumber"
+          "name",
+          "location",
+          "route",
+          "ownershipType"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "from": {
+          "name": {
             "type": "string"
           },
-          "to": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "default": "SuperFast",
-            "enum": [
-              "SuperFast",
-              "MinnalSuperDeluxe",
-              "SuperExpressAirBus",
-              "SuperDeluxeAirBus"
-            ]
-          },
-          "time": {
-            "type": "string"
-          },
-          "days": {
-            "type": "string"
-          },
-          "bookingUrl": {
-            "type": "string"
-          },
-          "busNumber": {
-            "type": "string"
+          "location": {
+            "type": "object",
+            "required": [
+              "id",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            }
           },
           "route": {
             "type": "object",
@@ -578,46 +586,73 @@
                 ]
               }
             }
+          },
+          "openTime": {
+            "type": "string"
+          },
+          "closingTime": {
+            "type": "string"
+          },
+          "ownershipType": {
+            "type": "string",
+            "default": "None",
+            "enum": [
+              "None",
+              "Private",
+              "Government"
+            ]
+          },
+          "contact": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Hospital",
+              "FuelStation",
+              "Bank",
+              "ATM",
+              "WasteBin"
+            ]
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewKsrtc": {
+      "NewNear-me": {
         "required": [
-          "from",
-          "to",
-          "type",
-          "days",
-          "bookingUrl",
-          "busNumber"
+          "name",
+          "location",
+          "route",
+          "ownershipType"
         ],
         "properties": {
-          "from": {
+          "name": {
             "type": "string"
           },
-          "to": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "default": "SuperFast",
-            "enum": [
-              "SuperFast",
-              "MinnalSuperDeluxe",
-              "SuperExpressAirBus",
-              "SuperDeluxeAirBus"
-            ]
-          },
-          "time": {
-            "type": "string"
-          },
-          "days": {
-            "type": "string"
-          },
-          "bookingUrl": {
-            "type": "string"
-          },
-          "busNumber": {
-            "type": "string"
+          "location": {
+            "type": "object",
+            "required": [
+              "id",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            }
           },
           "route": {
             "type": "object",
@@ -641,6 +676,38 @@
                 ]
               }
             }
+          },
+          "openTime": {
+            "type": "string"
+          },
+          "closingTime": {
+            "type": "string"
+          },
+          "ownershipType": {
+            "type": "string",
+            "default": "None",
+            "enum": [
+              "None",
+              "Private",
+              "Government"
+            ]
+          },
+          "contact": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Hospital",
+              "FuelStation",
+              "Bank",
+              "ATM",
+              "WasteBin"
+            ]
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -652,9 +719,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Ksrtc"
-    }
-  ]
+  "tags": []
 }

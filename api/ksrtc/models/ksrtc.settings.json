@@ -37,18 +37,6 @@
       "type": "string",
       "required": true
     },
-    "route": {
-      "type": "enumeration",
-      "enum": [
-        "Violet",
-        "Indigo",
-        "Blue",
-        "Green",
-        "Yellow",
-        "Orrange",
-        "Red"
-      ]
-    },
     "bookingUrl": {
       "type": "string",
       "required": true
@@ -56,6 +44,11 @@
     "busNumber": {
       "type": "string",
       "required": true
+    },
+    "route": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.route"
     }
   }
 }
