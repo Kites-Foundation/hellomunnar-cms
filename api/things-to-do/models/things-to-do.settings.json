@@ -47,11 +47,6 @@
     "closingTime": {
       "type": "time"
     },
-    "challenges": {
-      "type": "component",
-      "repeatable": true,
-      "component": "collection-type-components.challenges"
-    },
     "difficultyLevel": {
       "type": "enumeration",
       "enum": [
@@ -71,7 +66,8 @@
     },
     "reviews": {
       "via": "thingsToDo",
-      "collection": "review"
+      "collection": "review",
+      "model": "review"
     },
     "type": {
       "type": "enumeration",
@@ -96,6 +92,9 @@
         "Safari"
       ],
       "required": true
+    },
+    "challenges": {
+      "collection": "challenge"
     }
   }
 }

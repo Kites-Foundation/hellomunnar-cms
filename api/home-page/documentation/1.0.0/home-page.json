@@ -359,17 +359,10 @@
                   "items": {
                     "required": [
                       "id",
-                      "title",
-                      "description",
-                      "mapUrl",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "name"
                     ],
                     "properties": {
                       "id": {
-                        "type": "string"
-                      },
-                      "title": {
                         "type": "string"
                       },
                       "reviews": {
@@ -378,47 +371,55 @@
                           "type": "string"
                         }
                       },
+                      "route": {
+                        "type": "component"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
                       "description": {
                         "type": "string"
                       },
-                      "mapUrl": {
+                      "image": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "nearMes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "openingTime": {
                         "type": "string"
                       },
-                      "reviewAverage": {
-                        "type": "number"
+                      "closingTime": {
+                        "type": "string"
+                      },
+                      "availableDays": {
+                        "type": "string"
                       },
                       "slug": {
                         "type": "uid"
                       },
-                      "route": {
-                        "type": "string",
-                        "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red",
-                          "NoRoute"
-                        ]
-                      },
-                      "daysAvailable": {
-                        "type": "string"
-                      },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "seoMeta": {
+                      "location": {
                         "type": "component"
                       },
-                      "flora_and_faunas": {
+                      "activityTags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "floraAndFaunas": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "challenges": {
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -474,9 +475,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "challenges": {
-                        "type": "component"
-                      },
                       "difficultyLevel": {
                         "type": "string",
                         "enum": [
@@ -519,6 +517,12 @@
                           "Adventure",
                           "Safari"
                         ]
+                      },
+                      "challenges": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "created_by": {
                         "type": "string"
@@ -658,17 +662,10 @@
                   "items": {
                     "required": [
                       "id",
-                      "title",
-                      "description",
-                      "mapUrl",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "name"
                     ],
                     "properties": {
                       "id": {
-                        "type": "string"
-                      },
-                      "title": {
                         "type": "string"
                       },
                       "reviews": {
@@ -677,47 +674,55 @@
                           "type": "string"
                         }
                       },
+                      "route": {
+                        "type": "component"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
                       "description": {
                         "type": "string"
                       },
-                      "mapUrl": {
+                      "image": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "nearMes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "openingTime": {
                         "type": "string"
                       },
-                      "reviewAverage": {
-                        "type": "number"
+                      "closingTime": {
+                        "type": "string"
+                      },
+                      "availableDays": {
+                        "type": "string"
                       },
                       "slug": {
                         "type": "uid"
                       },
-                      "route": {
-                        "type": "string",
-                        "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red",
-                          "NoRoute"
-                        ]
-                      },
-                      "daysAvailable": {
-                        "type": "string"
-                      },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "seoMeta": {
+                      "location": {
                         "type": "component"
                       },
-                      "flora_and_faunas": {
+                      "activityTags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "floraAndFaunas": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "challenges": {
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -773,9 +778,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "challenges": {
-                        "type": "component"
-                      },
                       "difficultyLevel": {
                         "type": "string",
                         "enum": [
@@ -818,6 +820,12 @@
                           "Adventure",
                           "Safari"
                         ]
+                      },
+                      "challenges": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "created_by": {
                         "type": "string"

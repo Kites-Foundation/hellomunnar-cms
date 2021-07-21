@@ -614,6 +614,89 @@
               "ATM",
               "WasteBin"
             ]
+          },
+          "nearestDestinations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "reviews": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "route": {
+                  "type": "component"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "nearMes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "openingTime": {
+                  "type": "string"
+                },
+                "closingTime": {
+                  "type": "string"
+                },
+                "availableDays": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "location": {
+                  "type": "component"
+                },
+                "activityTags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "floraAndFaunas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "challenges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -700,6 +783,12 @@
               "ATM",
               "WasteBin"
             ]
+          },
+          "nearestDestinations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

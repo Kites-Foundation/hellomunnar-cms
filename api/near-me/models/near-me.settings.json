@@ -55,6 +55,10 @@
         "ATM",
         "WasteBin"
       ]
+    },
+    "nearestDestinations": {
+      "via": "nearMes",
+      "collection": "destination"
     }
   }
 }

@@ -12,72 +12,65 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "reviews": {
       "via": "destination",
       "collection": "review"
     },
-    "description": {
-      "type": "text",
-      "required": true
+    "route": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.route"
     },
-    "mapUrl": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "reviewAverage": {
-      "type": "decimal",
-      "default": 0,
-      "required": true
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
-    "route": {
-      "type": "enumeration",
-      "enum": [
-        "Violet",
-        "Indigo",
-        "Blue",
-        "Green",
-        "Yellow",
-        "Orrange",
-        "Red",
-        "NoRoute"
-      ]
-    },
-    "daysAvailable": {
-      "type": "string"
-    },
-    "timeAvailable": {
-      "type": "string"
-    },
-    "reviewsCount": {
-      "type": "integer",
-      "default": 0,
-      "required": true
+    "description": {
+      "type": "text"
     },
     "image": {
-      "model": "file",
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos"
       ],
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
     },
-    "seoMeta": {
-      "type": "component",
-      "repeatable": true,
-      "component": "common.seo"
+    "nearMes": {
+      "collection": "near-me",
+      "via": "nearestDestinations",
+      "dominant": true
     },
-    "flora_and_faunas": {
+    "openingTime": {
+      "type": "time"
+    },
+    "closingTime": {
+      "type": "time"
+    },
+    "availableDays": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.location"
+    },
+    "activityTags": {
+      "collection": "activity-tag"
+    },
+    "floraAndFaunas": {
       "collection": "flora-and-fauna"
+    },
+    "challenges": {
+      "collection": "challenge"
     }
   }
 }

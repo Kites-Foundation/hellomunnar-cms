@@ -669,27 +669,6 @@
           "closingTime": {
             "type": "string"
           },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "difficultyLevel": {
             "type": "string",
             "enum": [
@@ -794,6 +773,28 @@
               "Adventure",
               "Safari"
             ]
+          },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -865,27 +866,6 @@
           "closingTime": {
             "type": "string"
           },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "difficultyLevel": {
             "type": "string",
             "enum": [
@@ -946,6 +926,12 @@
               "Adventure",
               "Safari"
             ]
+          },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/reviews": {
+    "/activity-tags": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Review"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Activity-tag"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Review"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewReview"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/reviews/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Activity-tag"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewActivity-tag"
+              }
+            }
+          }
+        }
       }
     },
-    "/reviews/{id}": {
+    "/activity-tags/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Activity-tag"
+        ],
+        "parameters": []
+      }
+    },
+    "/activity-tags/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Activity-tag"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Review"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Activity-tag"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewReview"
+                "$ref": "#/components/schemas/NewActivity-tag"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Review"
+          "Activity-tag"
         ],
         "parameters": [
           {
@@ -514,218 +527,76 @@
   },
   "components": {
     "schemas": {
-      "Review": {
+      "Activity-tag": {
         "required": [
           "id",
-          "title",
-          "description",
-          "published",
-          "date"
+          "name",
+          "icon"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
-          "images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "user": {
+          "icon": {
             "required": [
               "id",
-              "username",
-              "email"
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "name": {
                 "type": "string"
               },
-              "email": {
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
                 "type": "string"
               },
               "provider": {
                 "type": "string"
               },
-              "password": {
-                "type": "string"
+              "provider_metadata": {
+                "type": "object"
               },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "favourites": {
-                "type": "component"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "destination": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "route": {
-                "type": "component"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "nearMes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "openingTime": {
-                "type": "string"
-              },
-              "closingTime": {
-                "type": "string"
-              },
-              "availableDays": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "location": {
-                "type": "component"
-              },
-              "activityTags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "floraAndFaunas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "challenges": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
+              "related": {
                 "type": "string"
               },
               "created_by": {
@@ -736,133 +607,21 @@
               }
             }
           },
-          "thingsToDo": {
-            "required": [
-              "id",
-              "route",
-              "name",
-              "difficultyLevel",
-              "type"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "route": {
-                "type": "component"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "location": {
-                "type": "component"
-              },
-              "openTime": {
-                "type": "string"
-              },
-              "closingTime": {
-                "type": "string"
-              },
-              "difficultyLevel": {
-                "type": "string",
-                "enum": [
-                  "Challenging",
-                  "Adventure",
-                  "Easy"
-                ]
-              },
-              "price": {
-                "type": "string"
-              },
-              "booking": {
-                "type": "component"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "Trekking",
-                  "Boating",
-                  "SiteSeeing",
-                  "Camping",
-                  "Cycling",
-                  "Wildlife",
-                  "RockClimbing",
-                  "Photography",
-                  "Landscape",
-                  "SunriseSunset",
-                  "TeaPlantationFarming",
-                  "Festivals",
-                  "Heritage",
-                  "ThemePark",
-                  "Shopping",
-                  "Fooding",
-                  "Adventure",
-                  "Safari"
-                ]
-              },
-              "challenges": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "date": {
+          "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewReview": {
+      "NewActivity-tag": {
         "required": [
-          "title",
-          "description",
-          "published",
-          "date"
+          "name"
         ],
         "properties": {
-          "title": {
+          "name": {
             "type": "string"
           },
-          "description": {
-            "type": "string"
-          },
-          "published": {
-            "type": "boolean",
-            "default": false
-          },
-          "user": {
-            "type": "string"
-          },
-          "destination": {
-            "type": "string"
-          },
-          "thingsToDo": {
-            "type": "string"
-          },
-          "date": {
+          "published_at": {
             "type": "string",
             "format": "date-time"
           },
@@ -876,9 +635,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Review"
-    }
-  ]
+  "tags": []
 }

@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/18/2021 11:45:03 PM"
+    "x-generation-date": "07/21/2021 7:04:58 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -46,6 +46,530 @@
     }
   ],
   "paths": {
+    "/activity-tags": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Activity-tag"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Activity-tag"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewActivity-tag"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/activity-tags/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Activity-tag"
+        ],
+        "parameters": []
+      }
+    },
+    "/activity-tags/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Activity-tag"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Activity-tag"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewActivity-tag"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Activity-tag"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
     "/challenges": {
       "get": {
         "deprecated": false,
@@ -3977,9 +4501,11 @@
   },
   "components": {
     "schemas": {
-      "Challenge": {
+      "Activity-tag": {
         "required": [
-          "id"
+          "id",
+          "name",
+          "icon"
         ],
         "properties": {
           "id": {
@@ -4061,7 +4587,10 @@
           }
         }
       },
-      "NewChallenge": {
+      "NewActivity-tag": {
+        "required": [
+          "name"
+        ],
         "properties": {
           "name": {
             "type": "string"
@@ -4078,20 +4607,39 @@
           }
         }
       },
-      "Destination": {
+      "Challenge": {
         "required": [
-          "id",
-          "title",
-          "description",
-          "mapUrl",
-          "reviewAverage",
-          "reviewsCount"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "NewChallenge": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Destination": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "properties": {
+          "id": {
             "type": "string"
           },
           "reviews": {
@@ -4144,199 +4692,235 @@
               }
             }
           },
-          "description": {
-            "type": "string"
-          },
-          "mapUrl": {
-            "type": "string"
-          },
-          "reviewAverage": {
-            "type": "number",
-            "default": 0
-          },
-          "slug": {
-            "type": "uid"
-          },
           "route": {
-            "type": "string",
-            "enum": [
-              "Violet",
-              "Indigo",
-              "Blue",
-              "Green",
-              "Yellow",
-              "Orrange",
-              "Red",
-              "NoRoute"
-            ]
-          },
-          "daysAvailable": {
-            "type": "string"
-          },
-          "timeAvailable": {
-            "type": "string"
-          },
-          "reviewsCount": {
-            "type": "integer",
-            "default": 0
-          },
-          "image": {
+            "type": "object",
             "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
+              "id"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+              "routeName": {
+                "type": "string",
+                "enum": [
+                  "Violet",
+                  "Indigo",
+                  "Blue",
+                  "Green",
+                  "Yellow",
+                  "Orrange",
+                  "Red"
+                ]
               }
             }
           },
-          "seoMeta": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
             "type": "array",
             "items": {
-              "type": "object",
               "required": [
-                "id"
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "metaTitle": {
-                  "type": "string",
-                  "maxLength": 60
+                "name": {
+                  "type": "string"
                 },
-                "metaDescription": {
-                  "type": "string",
-                  "maxLength": 160
+                "alternativeText": {
+                  "type": "string"
                 },
-                "ogImage": {
-                  "required": [
-                    "id",
-                    "name",
-                    "hash",
-                    "mime",
-                    "size",
-                    "url",
-                    "provider"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "alternativeText": {
-                      "type": "string"
-                    },
-                    "caption": {
-                      "type": "string"
-                    },
-                    "width": {
-                      "type": "integer"
-                    },
-                    "height": {
-                      "type": "integer"
-                    },
-                    "formats": {
-                      "type": "object"
-                    },
-                    "hash": {
-                      "type": "string"
-                    },
-                    "ext": {
-                      "type": "string"
-                    },
-                    "mime": {
-                      "type": "string"
-                    },
-                    "size": {
-                      "type": "number"
-                    },
-                    "url": {
-                      "type": "string"
-                    },
-                    "previewUrl": {
-                      "type": "string"
-                    },
-                    "provider": {
-                      "type": "string"
-                    },
-                    "provider_metadata": {
-                      "type": "object"
-                    },
-                    "related": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
                 }
               }
             }
           },
-          "flora_and_faunas": {
+          "nearMes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "location",
+                "route",
+                "ownershipType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "location": {
+                  "type": "component"
+                },
+                "route": {
+                  "type": "component"
+                },
+                "openTime": {
+                  "type": "string"
+                },
+                "closingTime": {
+                  "type": "string"
+                },
+                "ownershipType": {
+                  "type": "string",
+                  "enum": [
+                    "None",
+                    "Private",
+                    "Government"
+                  ]
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "Hospital",
+                    "FuelStation",
+                    "Bank",
+                    "ATM",
+                    "WasteBin"
+                  ]
+                },
+                "nearestDestinations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "openingTime": {
+            "type": "string"
+          },
+          "closingTime": {
+            "type": "string"
+          },
+          "availableDays": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "uid"
+          },
+          "location": {
+            "type": "object",
+            "required": [
+              "id",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              }
+            }
+          },
+          "activityTags": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "icon"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "floraAndFaunas": {
             "type": "array",
             "items": {
               "required": [
@@ -4374,6 +4958,28 @@
               }
             }
           },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -4382,148 +4988,97 @@
       },
       "NewDestination": {
         "required": [
-          "title",
-          "description",
-          "mapUrl",
-          "reviewAverage",
-          "reviewsCount"
+          "name"
         ],
         "properties": {
-          "title": {
-            "type": "string"
-          },
           "reviews": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
+          "route": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "routeName": {
+                "type": "string",
+                "enum": [
+                  "Violet",
+                  "Indigo",
+                  "Blue",
+                  "Green",
+                  "Yellow",
+                  "Orrange",
+                  "Red"
+                ]
+              }
+            }
+          },
+          "name": {
+            "type": "string"
+          },
           "description": {
             "type": "string"
           },
-          "mapUrl": {
+          "nearMes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "openingTime": {
             "type": "string"
           },
-          "reviewAverage": {
-            "type": "number",
-            "default": 0
+          "closingTime": {
+            "type": "string"
+          },
+          "availableDays": {
+            "type": "string"
           },
           "slug": {
             "type": "uid"
           },
-          "route": {
-            "type": "string",
-            "enum": [
-              "Violet",
-              "Indigo",
-              "Blue",
-              "Green",
-              "Yellow",
-              "Orrange",
-              "Red",
-              "NoRoute"
-            ]
-          },
-          "daysAvailable": {
-            "type": "string"
-          },
-          "timeAvailable": {
-            "type": "string"
-          },
-          "reviewsCount": {
-            "type": "integer",
-            "default": 0
-          },
-          "seoMeta": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "metaTitle": {
-                  "type": "string",
-                  "maxLength": 60
-                },
-                "metaDescription": {
-                  "type": "string",
-                  "maxLength": 160
-                },
-                "ogImage": {
-                  "required": [
-                    "id",
-                    "name",
-                    "hash",
-                    "mime",
-                    "size",
-                    "url",
-                    "provider"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "alternativeText": {
-                      "type": "string"
-                    },
-                    "caption": {
-                      "type": "string"
-                    },
-                    "width": {
-                      "type": "integer"
-                    },
-                    "height": {
-                      "type": "integer"
-                    },
-                    "formats": {
-                      "type": "object"
-                    },
-                    "hash": {
-                      "type": "string"
-                    },
-                    "ext": {
-                      "type": "string"
-                    },
-                    "mime": {
-                      "type": "string"
-                    },
-                    "size": {
-                      "type": "number"
-                    },
-                    "url": {
-                      "type": "string"
-                    },
-                    "previewUrl": {
-                      "type": "string"
-                    },
-                    "provider": {
-                      "type": "string"
-                    },
-                    "provider_metadata": {
-                      "type": "object"
-                    },
-                    "related": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                }
+          "location": {
+            "type": "object",
+            "required": [
+              "id",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
               }
             }
           },
-          "flora_and_faunas": {
+          "activityTags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "floraAndFaunas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "challenges": {
             "type": "array",
             "items": {
               "type": "string"
@@ -4706,17 +5261,10 @@
                   "items": {
                     "required": [
                       "id",
-                      "title",
-                      "description",
-                      "mapUrl",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "name"
                     ],
                     "properties": {
                       "id": {
-                        "type": "string"
-                      },
-                      "title": {
                         "type": "string"
                       },
                       "reviews": {
@@ -4725,47 +5273,55 @@
                           "type": "string"
                         }
                       },
+                      "route": {
+                        "type": "component"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
                       "description": {
                         "type": "string"
                       },
-                      "mapUrl": {
+                      "image": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "nearMes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "openingTime": {
                         "type": "string"
                       },
-                      "reviewAverage": {
-                        "type": "number"
+                      "closingTime": {
+                        "type": "string"
+                      },
+                      "availableDays": {
+                        "type": "string"
                       },
                       "slug": {
                         "type": "uid"
                       },
-                      "route": {
-                        "type": "string",
-                        "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red",
-                          "NoRoute"
-                        ]
-                      },
-                      "daysAvailable": {
-                        "type": "string"
-                      },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "seoMeta": {
+                      "location": {
                         "type": "component"
                       },
-                      "flora_and_faunas": {
+                      "activityTags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "floraAndFaunas": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "challenges": {
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -4821,9 +5377,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "challenges": {
-                        "type": "component"
-                      },
                       "difficultyLevel": {
                         "type": "string",
                         "enum": [
@@ -4866,6 +5419,12 @@
                           "Adventure",
                           "Safari"
                         ]
+                      },
+                      "challenges": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "created_by": {
                         "type": "string"
@@ -5005,17 +5564,10 @@
                   "items": {
                     "required": [
                       "id",
-                      "title",
-                      "description",
-                      "mapUrl",
-                      "reviewAverage",
-                      "reviewsCount"
+                      "name"
                     ],
                     "properties": {
                       "id": {
-                        "type": "string"
-                      },
-                      "title": {
                         "type": "string"
                       },
                       "reviews": {
@@ -5024,47 +5576,55 @@
                           "type": "string"
                         }
                       },
+                      "route": {
+                        "type": "component"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
                       "description": {
                         "type": "string"
                       },
-                      "mapUrl": {
+                      "image": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "nearMes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "openingTime": {
                         "type": "string"
                       },
-                      "reviewAverage": {
-                        "type": "number"
+                      "closingTime": {
+                        "type": "string"
+                      },
+                      "availableDays": {
+                        "type": "string"
                       },
                       "slug": {
                         "type": "uid"
                       },
-                      "route": {
-                        "type": "string",
-                        "enum": [
-                          "Violet",
-                          "Indigo",
-                          "Blue",
-                          "Green",
-                          "Yellow",
-                          "Orrange",
-                          "Red",
-                          "NoRoute"
-                        ]
-                      },
-                      "daysAvailable": {
-                        "type": "string"
-                      },
-                      "timeAvailable": {
-                        "type": "string"
-                      },
-                      "reviewsCount": {
-                        "type": "integer"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "seoMeta": {
+                      "location": {
                         "type": "component"
                       },
-                      "flora_and_faunas": {
+                      "activityTags": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "floraAndFaunas": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "challenges": {
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -5120,9 +5680,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "challenges": {
-                        "type": "component"
-                      },
                       "difficultyLevel": {
                         "type": "string",
                         "enum": [
@@ -5165,6 +5722,12 @@
                           "Adventure",
                           "Safari"
                         ]
+                      },
+                      "challenges": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "created_by": {
                         "type": "string"
@@ -5495,6 +6058,89 @@
               "ATM",
               "WasteBin"
             ]
+          },
+          "nearestDestinations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "reviews": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "route": {
+                  "type": "component"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "nearMes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "openingTime": {
+                  "type": "string"
+                },
+                "closingTime": {
+                  "type": "string"
+                },
+                "availableDays": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "location": {
+                  "type": "component"
+                },
+                "activityTags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "floraAndFaunas": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "challenges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -5581,6 +6227,12 @@
               "ATM",
               "WasteBin"
             ]
+          },
+          "nearestDestinations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -5735,17 +6387,10 @@
           "destination": {
             "required": [
               "id",
-              "title",
-              "description",
-              "mapUrl",
-              "reviewAverage",
-              "reviewsCount"
+              "name"
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "title": {
                 "type": "string"
               },
               "reviews": {
@@ -5754,47 +6399,55 @@
                   "type": "string"
                 }
               },
+              "route": {
+                "type": "component"
+              },
+              "name": {
+                "type": "string"
+              },
               "description": {
                 "type": "string"
               },
-              "mapUrl": {
+              "image": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "nearMes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "openingTime": {
                 "type": "string"
               },
-              "reviewAverage": {
-                "type": "number"
+              "closingTime": {
+                "type": "string"
+              },
+              "availableDays": {
+                "type": "string"
               },
               "slug": {
                 "type": "uid"
               },
-              "route": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red",
-                  "NoRoute"
-                ]
-              },
-              "daysAvailable": {
-                "type": "string"
-              },
-              "timeAvailable": {
-                "type": "string"
-              },
-              "reviewsCount": {
-                "type": "integer"
-              },
-              "image": {
-                "type": "string"
-              },
-              "seoMeta": {
+              "location": {
                 "type": "component"
               },
-              "flora_and_faunas": {
+              "activityTags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "floraAndFaunas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "challenges": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -5847,9 +6500,6 @@
               "closingTime": {
                 "type": "string"
               },
-              "challenges": {
-                "type": "component"
-              },
               "difficultyLevel": {
                 "type": "string",
                 "enum": [
@@ -5892,6 +6542,12 @@
                   "Adventure",
                   "Safari"
                 ]
+              },
+              "challenges": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -6088,27 +6744,6 @@
           "closingTime": {
             "type": "string"
           },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "difficultyLevel": {
             "type": "string",
             "enum": [
@@ -6213,6 +6848,28 @@
               "Adventure",
               "Safari"
             ]
+          },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -6284,27 +6941,6 @@
           "closingTime": {
             "type": "string"
           },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "difficultyLevel": {
             "type": "string",
             "enum": [
@@ -6365,6 +7001,12 @@
               "Adventure",
               "Safari"
             ]
+          },
+          "challenges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

@@ -2,29 +2,16 @@
   "kind": "collectionType",
   "collectionName": "challenges",
   "info": {
-    "name": "challenge",
-    "description": ""
+    "name": "challenge"
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
       "type": "string"
-    },
-    "icon": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
     }
   }
 }
