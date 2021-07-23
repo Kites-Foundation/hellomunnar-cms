@@ -41,8 +41,8 @@
       "pluginOptions": {}
     },
     "nearMes": {
-      "collection": "near-me",
       "via": "nearestDestinations",
+      "collection": "near-me",
       "dominant": true
     },
     "openingTime": {

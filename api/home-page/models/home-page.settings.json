@@ -14,7 +14,7 @@
     ]
   },
   "attributes": {
-    "page_title": {
+    "pageTitle": {
       "type": "string"
     },
     "rails": {

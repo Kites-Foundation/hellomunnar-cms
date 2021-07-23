@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/21/2021 7:04:58 PM"
+    "x-generation-date": "07/23/2021 7:50:42 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4836,8 +4836,7 @@
                   "enum": [
                     "Hospital",
                     "FuelStation",
-                    "Bank",
-                    "ATM",
+                    "BankNATM",
                     "WasteBin"
                   ]
                 },
@@ -5225,7 +5224,7 @@
           "id": {
             "type": "string"
           },
-          "page_title": {
+          "pageTitle": {
             "type": "string"
           },
           "rails": {
@@ -5528,7 +5527,7 @@
       },
       "NewHome-page": {
         "properties": {
-          "page_title": {
+          "pageTitle": {
             "type": "string"
           },
           "rails": {
@@ -5841,9 +5840,9 @@
           "from",
           "to",
           "type",
-          "days",
           "bookingUrl",
-          "busNumber"
+          "ksrtcRoute",
+          "days"
         ],
         "properties": {
           "id": {
@@ -5868,16 +5867,13 @@
           "time": {
             "type": "string"
           },
-          "days": {
-            "type": "string"
-          },
           "bookingUrl": {
             "type": "string"
           },
-          "busNumber": {
+          "ksrtcRoute": {
             "type": "string"
           },
-          "route": {
+          "days": {
             "type": "object",
             "required": [
               "id"
@@ -5886,17 +5882,33 @@
               "id": {
                 "type": "string"
               },
-              "routeName": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
               }
             }
           }
@@ -5907,9 +5919,9 @@
           "from",
           "to",
           "type",
-          "days",
           "bookingUrl",
-          "busNumber"
+          "ksrtcRoute",
+          "days"
         ],
         "properties": {
           "from": {
@@ -5931,16 +5943,13 @@
           "time": {
             "type": "string"
           },
-          "days": {
-            "type": "string"
-          },
           "bookingUrl": {
             "type": "string"
           },
-          "busNumber": {
+          "ksrtcRoute": {
             "type": "string"
           },
-          "route": {
+          "days": {
             "type": "object",
             "required": [
               "id"
@@ -5949,17 +5958,33 @@
               "id": {
                 "type": "string"
               },
-              "routeName": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
               }
             }
           },
@@ -6054,8 +6079,7 @@
             "enum": [
               "Hospital",
               "FuelStation",
-              "Bank",
-              "ATM",
+              "BankNATM",
               "WasteBin"
             ]
           },
@@ -6223,8 +6247,7 @@
             "enum": [
               "Hospital",
               "FuelStation",
-              "Bank",
-              "ATM",
+              "BankNATM",
               "WasteBin"
             ]
           },

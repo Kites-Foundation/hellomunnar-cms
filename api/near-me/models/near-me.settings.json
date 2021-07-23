@@ -51,8 +51,7 @@
       "enum": [
         "Hospital",
         "FuelStation",
-        "Bank",
-        "ATM",
+        "BankNATM",
         "WasteBin"
       ]
     },

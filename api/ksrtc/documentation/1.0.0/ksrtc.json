@@ -520,9 +520,9 @@
           "from",
           "to",
           "type",
-          "days",
           "bookingUrl",
-          "busNumber"
+          "ksrtcRoute",
+          "days"
         ],
         "properties": {
           "id": {
@@ -547,16 +547,13 @@
           "time": {
             "type": "string"
           },
-          "days": {
-            "type": "string"
-          },
           "bookingUrl": {
             "type": "string"
           },
-          "busNumber": {
+          "ksrtcRoute": {
             "type": "string"
           },
-          "route": {
+          "days": {
             "type": "object",
             "required": [
               "id"
@@ -565,17 +562,33 @@
               "id": {
                 "type": "string"
               },
-              "routeName": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
               }
             }
           }
@@ -586,9 +599,9 @@
           "from",
           "to",
           "type",
-          "days",
           "bookingUrl",
-          "busNumber"
+          "ksrtcRoute",
+          "days"
         ],
         "properties": {
           "from": {
@@ -610,16 +623,13 @@
           "time": {
             "type": "string"
           },
-          "days": {
-            "type": "string"
-          },
           "bookingUrl": {
             "type": "string"
           },
-          "busNumber": {
+          "ksrtcRoute": {
             "type": "string"
           },
-          "route": {
+          "days": {
             "type": "object",
             "required": [
               "id"
@@ -628,17 +638,33 @@
               "id": {
                 "type": "string"
               },
-              "routeName": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
               }
             }
           },

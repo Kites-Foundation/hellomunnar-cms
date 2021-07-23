@@ -33,22 +33,19 @@
     "time": {
       "type": "time"
     },
-    "days": {
-      "type": "string",
-      "required": true
-    },
     "bookingUrl": {
       "type": "string",
       "required": true
     },
-    "busNumber": {
+    "ksrtcRoute": {
       "type": "string",
       "required": true
     },
-    "route": {
+    "days": {
       "type": "component",
       "repeatable": false,
-      "component": "common.route"
+      "component": "common.days",
+      "required": true
     }
   }
 }

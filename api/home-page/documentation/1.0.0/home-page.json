@@ -323,7 +323,7 @@
           "id": {
             "type": "string"
           },
-          "page_title": {
+          "pageTitle": {
             "type": "string"
           },
           "rails": {
@@ -626,7 +626,7 @@
       },
       "NewHome-page": {
         "properties": {
-          "page_title": {
+          "pageTitle": {
             "type": "string"
           },
           "rails": {

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_common_days",
+  "info": {
+    "name": "days",
+    "icon": "calendar-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sunday": {
+      "type": "boolean",
+      "default": false
+    },
+    "monday": {
+      "type": "boolean",
+      "default": false
+    },
+    "tuesday": {
+      "type": "boolean",
+      "default": false
+    },
+    "wednessday": {
+      "type": "boolean",
+      "default": false
+    },
+    "thursday": {
+      "type": "boolean",
+      "default": false
+    },
+    "friday": {
+      "type": "boolean",
+      "default": false
+    },
+    "saturday": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
