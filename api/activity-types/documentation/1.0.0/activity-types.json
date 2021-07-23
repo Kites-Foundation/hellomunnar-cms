@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/activity-tags": {
+    "/activity-types": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the activity-types's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve activity-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity-tag"
+          "Activity-types"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new activity-types record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve activity-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity-tag"
+          "Activity-types"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewActivity-tag"
+                "$ref": "#/components/schemas/NewActivity-types"
               }
             }
           }
         }
       }
     },
-    "/activity-tags/count": {
+    "/activity-types/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of activity-types documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve activity-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Activity-tag"
+          "Activity-types"
         ],
         "parameters": []
       }
     },
-    "/activity-tags/{id}": {
+    "/activity-types/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one activity-types record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve activity-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity-tag"
+          "Activity-types"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single activity-types record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve activity-types document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity-tag"
+          "Activity-types"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewActivity-tag"
+                "$ref": "#/components/schemas/NewActivity-types"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single activity-types record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single activity-types based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Activity-tag"
+          "Activity-types"
         ],
         "parameters": [
           {
@@ -527,11 +527,10 @@
   },
   "components": {
     "schemas": {
-      "Activity-tag": {
+      "Activity-types": {
         "required": [
           "id",
-          "name",
-          "icon"
+          "name"
         ],
         "properties": {
           "id": {
@@ -606,24 +605,16 @@
                 "type": "string"
               }
             }
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
-      "NewActivity-tag": {
+      "NewActivity-types": {
         "required": [
           "name"
         ],
         "properties": {
           "name": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"

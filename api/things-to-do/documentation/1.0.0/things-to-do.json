@@ -532,8 +532,7 @@
           "id",
           "route",
           "name",
-          "difficultyLevel",
-          "type"
+          "difficultyLevel"
         ],
         "properties": {
           "id": {
@@ -639,27 +638,24 @@
             }
           },
           "location": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "latitude",
-                "longitude"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "locationName": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
-                }
+            "type": "object",
+            "required": [
+              "id",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
               }
             }
           },
@@ -672,8 +668,8 @@
           "difficultyLevel": {
             "type": "string",
             "enum": [
-              "Challenging",
-              "Adventure",
+              "Difficult",
+              "Moderate",
               "Easy"
             ]
           },
@@ -736,10 +732,10 @@
                 "destination": {
                   "type": "string"
                 },
-                "thingsToDo": {
+                "date": {
                   "type": "string"
                 },
-                "date": {
+                "activity": {
                   "type": "string"
                 },
                 "created_by": {
@@ -750,29 +746,6 @@
                 }
               }
             }
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "Trekking",
-              "Boating",
-              "SiteSeeing",
-              "Camping",
-              "Cycling",
-              "Wildlife",
-              "RockClimbing",
-              "Photography",
-              "Landscape",
-              "SunriseSunset",
-              "TeaPlantationFarming",
-              "Festivals",
-              "Heritage",
-              "ThemePark",
-              "Shopping",
-              "Fooding",
-              "Adventure",
-              "Safari"
-            ]
           },
           "challenges": {
             "type": "array",
@@ -795,6 +768,32 @@
                 }
               }
             }
+          },
+          "types": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -802,8 +801,7 @@
         "required": [
           "route",
           "name",
-          "difficultyLevel",
-          "type"
+          "difficultyLevel"
         ],
         "properties": {
           "route": {
@@ -836,27 +834,24 @@
             "type": "string"
           },
           "location": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "latitude",
-                "longitude"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "locationName": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
-                }
+            "type": "object",
+            "required": [
+              "id",
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
               }
             }
           },
@@ -869,8 +864,8 @@
           "difficultyLevel": {
             "type": "string",
             "enum": [
-              "Challenging",
-              "Adventure",
+              "Difficult",
+              "Moderate",
               "Easy"
             ]
           },
@@ -904,30 +899,13 @@
               "type": "string"
             }
           },
-          "type": {
-            "type": "string",
-            "enum": [
-              "Trekking",
-              "Boating",
-              "SiteSeeing",
-              "Camping",
-              "Cycling",
-              "Wildlife",
-              "RockClimbing",
-              "Photography",
-              "Landscape",
-              "SunriseSunset",
-              "TeaPlantationFarming",
-              "Festivals",
-              "Heritage",
-              "ThemePark",
-              "Shopping",
-              "Fooding",
-              "Adventure",
-              "Safari"
-            ]
-          },
           "challenges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "types": {
             "type": "array",
             "items": {
               "type": "string"

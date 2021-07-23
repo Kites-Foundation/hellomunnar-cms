@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "things_to_dos",
+  "collectionName": "activities",
   "info": {
-    "name": "thingsToDo",
+    "name": "activity",
     "description": ""
   },
   "options": {
@@ -38,7 +38,7 @@
     },
     "location": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "collection-type-components.location"
     },
     "openTime": {
@@ -50,8 +50,8 @@
     "difficultyLevel": {
       "type": "enumeration",
       "enum": [
-        "Challenging",
-        "Adventure",
+        "Difficult",
+        "Moderate",
         "Easy"
       ],
       "required": true
@@ -65,36 +65,15 @@
       "component": "collection-type-components.booking"
     },
     "reviews": {
-      "via": "thingsToDo",
+      "via": "activity",
       "collection": "review",
       "model": "review"
     },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "Trekking",
-        "Boating",
-        "SiteSeeing",
-        "Camping",
-        "Cycling",
-        "Wildlife",
-        "RockClimbing",
-        "Photography",
-        "Landscape",
-        "SunriseSunset",
-        "TeaPlantationFarming",
-        "Festivals",
-        "Heritage",
-        "ThemePark",
-        "Shopping",
-        "Fooding",
-        "Adventure",
-        "Safari"
-      ],
-      "required": true
-    },
     "challenges": {
       "collection": "challenge"
+    },
+    "types": {
+      "collection": "activity-types"
     }
   }
 }

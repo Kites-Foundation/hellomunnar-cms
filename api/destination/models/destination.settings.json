@@ -63,9 +63,6 @@
       "repeatable": false,
       "component": "collection-type-components.location"
     },
-    "activityTags": {
-      "collection": "activity-tag"
-    },
     "floraAndFaunas": {
       "collection": "flora-and-fauna"
     },

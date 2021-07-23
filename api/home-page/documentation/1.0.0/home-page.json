@@ -407,12 +407,6 @@
                       "location": {
                         "type": "component"
                       },
-                      "activityTags": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      },
                       "floraAndFaunas": {
                         "type": "array",
                         "items": {
@@ -444,8 +438,7 @@
                       "id",
                       "route",
                       "name",
-                      "difficultyLevel",
-                      "type"
+                      "difficultyLevel"
                     ],
                     "properties": {
                       "id": {
@@ -478,8 +471,8 @@
                       "difficultyLevel": {
                         "type": "string",
                         "enum": [
-                          "Challenging",
-                          "Adventure",
+                          "Difficult",
+                          "Moderate",
                           "Easy"
                         ]
                       },
@@ -495,30 +488,13 @@
                           "type": "string"
                         }
                       },
-                      "type": {
-                        "type": "string",
-                        "enum": [
-                          "Trekking",
-                          "Boating",
-                          "SiteSeeing",
-                          "Camping",
-                          "Cycling",
-                          "Wildlife",
-                          "RockClimbing",
-                          "Photography",
-                          "Landscape",
-                          "SunriseSunset",
-                          "TeaPlantationFarming",
-                          "Festivals",
-                          "Heritage",
-                          "ThemePark",
-                          "Shopping",
-                          "Fooding",
-                          "Adventure",
-                          "Safari"
-                        ]
-                      },
                       "challenges": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "types": {
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -710,12 +686,6 @@
                       "location": {
                         "type": "component"
                       },
-                      "activityTags": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        }
-                      },
                       "floraAndFaunas": {
                         "type": "array",
                         "items": {
@@ -747,8 +717,7 @@
                       "id",
                       "route",
                       "name",
-                      "difficultyLevel",
-                      "type"
+                      "difficultyLevel"
                     ],
                     "properties": {
                       "id": {
@@ -781,8 +750,8 @@
                       "difficultyLevel": {
                         "type": "string",
                         "enum": [
-                          "Challenging",
-                          "Adventure",
+                          "Difficult",
+                          "Moderate",
                           "Easy"
                         ]
                       },
@@ -798,30 +767,13 @@
                           "type": "string"
                         }
                       },
-                      "type": {
-                        "type": "string",
-                        "enum": [
-                          "Trekking",
-                          "Boating",
-                          "SiteSeeing",
-                          "Camping",
-                          "Cycling",
-                          "Wildlife",
-                          "RockClimbing",
-                          "Photography",
-                          "Landscape",
-                          "SunriseSunset",
-                          "TeaPlantationFarming",
-                          "Festivals",
-                          "Heritage",
-                          "ThemePark",
-                          "Shopping",
-                          "Fooding",
-                          "Adventure",
-                          "Safari"
-                        ]
-                      },
                       "challenges": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "types": {
                         "type": "array",
                         "items": {
                           "type": "string"

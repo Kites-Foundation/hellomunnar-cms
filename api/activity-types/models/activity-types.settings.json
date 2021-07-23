@@ -1,13 +1,14 @@
 {
   "kind": "collectionType",
-  "collectionName": "activity_tags",
+  "collectionName": "activity_types",
   "info": {
-    "name": "activityTag"
+    "name": "activityType",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -18,12 +19,12 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "files",
         "images",
+        "files",
         "videos"
       ],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {}
     }
   }

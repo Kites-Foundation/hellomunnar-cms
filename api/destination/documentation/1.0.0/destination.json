@@ -558,10 +558,10 @@
                 "destination": {
                   "type": "string"
                 },
-                "thingsToDo": {
+                "date": {
                   "type": "string"
                 },
-                "date": {
+                "activity": {
                   "type": "string"
                 },
                 "created_by": {
@@ -770,36 +770,6 @@
               }
             }
           },
-          "activityTags": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "icon"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "floraAndFaunas": {
             "type": "array",
             "items": {
@@ -944,12 +914,6 @@
               "longitude": {
                 "type": "number"
               }
-            }
-          },
-          "activityTags": {
-            "type": "array",
-            "items": {
-              "type": "string"
             }
           },
           "floraAndFaunas": {
