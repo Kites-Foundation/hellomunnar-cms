@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/23/2021 8:25:56 PM"
+    "x-generation-date": "07/23/2021 8:28:19 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4641,7 +4641,8 @@
                 "title",
                 "description",
                 "published",
-                "date"
+                "date",
+                "rating"
               ],
               "properties": {
                 "id": {
@@ -4673,6 +4674,9 @@
                 },
                 "activity": {
                   "type": "string"
+                },
+                "rating": {
+                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"
@@ -6178,7 +6182,8 @@
           "title",
           "description",
           "published",
-          "date"
+          "date",
+          "rating"
         ],
         "properties": {
           "id": {
@@ -6469,6 +6474,10 @@
                 "type": "string"
               }
             }
+          },
+          "rating": {
+            "type": "number",
+            "default": 0
           }
         }
       },
@@ -6477,7 +6486,8 @@
           "title",
           "description",
           "published",
-          "date"
+          "date",
+          "rating"
         ],
         "properties": {
           "title": {
@@ -6502,6 +6512,10 @@
           },
           "activity": {
             "type": "string"
+          },
+          "rating": {
+            "type": "number",
+            "default": 0
           },
           "created_by": {
             "type": "string"
@@ -6689,7 +6703,8 @@
                 "title",
                 "description",
                 "published",
-                "date"
+                "date",
+                "rating"
               ],
               "properties": {
                 "id": {
@@ -6721,6 +6736,9 @@
                 },
                 "activity": {
                   "type": "string"
+                },
+                "rating": {
+                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"

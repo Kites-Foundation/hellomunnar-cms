@@ -520,7 +520,8 @@
           "title",
           "description",
           "published",
-          "date"
+          "date",
+          "rating"
         ],
         "properties": {
           "id": {
@@ -811,6 +812,10 @@
                 "type": "string"
               }
             }
+          },
+          "rating": {
+            "type": "number",
+            "default": 0
           }
         }
       },
@@ -819,7 +824,8 @@
           "title",
           "description",
           "published",
-          "date"
+          "date",
+          "rating"
         ],
         "properties": {
           "title": {
@@ -844,6 +850,10 @@
           },
           "activity": {
             "type": "string"
+          },
+          "rating": {
+            "type": "number",
+            "default": 0
           },
           "created_by": {
             "type": "string"

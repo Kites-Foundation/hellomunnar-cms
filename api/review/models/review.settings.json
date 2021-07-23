@@ -51,6 +51,13 @@
     "activity": {
       "via": "reviews",
       "model": "things-to-do"
+    },
+    "rating": {
+      "type": "float",
+      "default": 0,
+      "required": true,
+      "max": 5,
+      "min": 0
     }
   }
 }

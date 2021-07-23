@@ -705,7 +705,8 @@
                 "title",
                 "description",
                 "published",
-                "date"
+                "date",
+                "rating"
               ],
               "properties": {
                 "id": {
@@ -737,6 +738,9 @@
                 },
                 "activity": {
                   "type": "string"
+                },
+                "rating": {
+                  "type": "number"
                 },
                 "created_by": {
                   "type": "string"
