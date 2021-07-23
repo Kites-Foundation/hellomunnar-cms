@@ -9,6 +9,9 @@
   "attributes": {
     "destinations": {
       "collection": "destination"
+    },
+    "activities": {
+      "collection": "things-to-do"
     }
   }
 }
