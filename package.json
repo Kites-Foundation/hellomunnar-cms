@@ -8,7 +8,8 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "config-dump": "strapi config:dump -f dashboard-config.json -p"
+    "config-dump": "strapi config:dump -f dashboard-config.json -p",
+    "config-restore": "strapi config:restore -f dashboard-config.json"
   },
   "devDependencies": {},
   "dependencies": {
