@@ -31,7 +31,7 @@
     },
     "published": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "private": true,
       "required": true
     },

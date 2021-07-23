@@ -66,14 +66,17 @@
     },
     "reviews": {
       "via": "activity",
-      "collection": "review",
-      "model": "review"
+      "collection": "review"
     },
     "challenges": {
       "collection": "challenge"
     },
     "types": {
       "collection": "activity-types"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }

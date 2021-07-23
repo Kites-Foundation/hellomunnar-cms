@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/23/2021 8:16:44 PM"
+    "x-generation-date": "07/23/2021 8:25:56 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5356,6 +5356,9 @@
                           "type": "string"
                         }
                       },
+                      "slug": {
+                        "type": "uid"
+                      },
                       "created_by": {
                         "type": "string"
                       },
@@ -5634,6 +5637,9 @@
                         "items": {
                           "type": "string"
                         }
+                      },
+                      "slug": {
+                        "type": "uid"
                       },
                       "created_by": {
                         "type": "string"
@@ -6453,6 +6459,9 @@
                   "type": "string"
                 }
               },
+              "slug": {
+                "type": "uid"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6479,7 +6488,7 @@
           },
           "published": {
             "type": "boolean",
-            "default": false
+            "default": true
           },
           "user": {
             "type": "string"
@@ -6769,6 +6778,9 @@
                 }
               }
             }
+          },
+          "slug": {
+            "type": "uid"
           }
         }
       },
@@ -6885,6 +6897,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "slug": {
+            "type": "uid"
           },
           "created_by": {
             "type": "string"

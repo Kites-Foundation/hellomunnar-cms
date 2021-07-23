@@ -801,6 +801,9 @@
                   "type": "string"
                 }
               },
+              "slug": {
+                "type": "uid"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -827,7 +830,7 @@
           },
           "published": {
             "type": "boolean",
-            "default": false
+            "default": true
           },
           "user": {
             "type": "string"
