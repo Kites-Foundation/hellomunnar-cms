@@ -15,12 +15,24 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
-      "required": true
+    "scientificName": {
+      "type": "string"
     },
-    "image": {
-      "model": "file",
+    "description": {
+      "type": "string"
+    },
+    "riskLevel": {
+      "type": "enumeration",
+      "enum": [
+        "endangered",
+        "endemic"
+      ]
+    },
+    "wikiLink": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -28,15 +40,8 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
-    },
-    "subTitle": {
-      "type": "string",
-      "required": true
-    },
-    "badgeText": {
-      "type": "string",
-      "required": true
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

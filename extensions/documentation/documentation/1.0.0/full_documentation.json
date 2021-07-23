@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/23/2021 8:42:18 PM"
+    "x-generation-date": "07/23/2021 9:59:24 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4856,9 +4856,6 @@
           "closingTime": {
             "type": "string"
           },
-          "availableDays": {
-            "type": "string"
-          },
           "slug": {
             "type": "uid"
           },
@@ -4889,10 +4886,7 @@
             "items": {
               "required": [
                 "id",
-                "name",
-                "description",
-                "subTitle",
-                "badgeText"
+                "name"
               ],
               "properties": {
                 "id": {
@@ -4901,17 +4895,27 @@
                 "name": {
                   "type": "string"
                 },
+                "scientificName": {
+                  "type": "string"
+                },
                 "description": {
                   "type": "string"
                 },
-                "image": {
+                "riskLevel": {
+                  "type": "string",
+                  "enum": [
+                    "endangered",
+                    "endemic"
+                  ]
+                },
+                "wikiLink": {
                   "type": "string"
                 },
-                "subTitle": {
-                  "type": "string"
-                },
-                "badgeText": {
-                  "type": "string"
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -4941,6 +4945,140 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "difficultyLevel"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "component"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "location": {
+                  "type": "component"
+                },
+                "openTime": {
+                  "type": "string"
+                },
+                "closingTime": {
+                  "type": "string"
+                },
+                "difficultyLevel": {
+                  "type": "string",
+                  "enum": [
+                    "Difficult",
+                    "Moderate",
+                    "Easy"
+                  ]
+                },
+                "price": {
+                  "type": "string"
+                },
+                "booking": {
+                  "type": "component"
+                },
+                "reviews": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "challenges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "destination": {
+                  "type": "string"
+                },
+                "interests": {
+                  "type": "string",
+                  "enum": [
+                    "family",
+                    "adventure",
+                    "nature",
+                    "photography",
+                    "heritage",
+                    "entertainment",
+                    "farmTourism"
+                  ]
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "days": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
               }
             }
           },
@@ -5002,9 +5140,6 @@
           "closingTime": {
             "type": "string"
           },
-          "availableDays": {
-            "type": "string"
-          },
           "slug": {
             "type": "uid"
           },
@@ -5042,6 +5177,51 @@
               "type": "string"
             }
           },
+          "activities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "days": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5057,10 +5237,7 @@
       "Flora-and-fauna": {
         "required": [
           "id",
-          "name",
-          "description",
-          "subTitle",
-          "badgeText"
+          "name"
         ],
         "properties": {
           "id": {
@@ -5069,102 +5246,116 @@
           "name": {
             "type": "string"
           },
+          "scientificName": {
+            "type": "string"
+          },
           "description": {
             "type": "string"
           },
-          "image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+          "riskLevel": {
+            "type": "string",
+            "enum": [
+              "endangered",
+              "endemic"
+            ]
+          },
+          "wikiLink": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
-          },
-          "subTitle": {
-            "type": "string"
-          },
-          "badgeText": {
-            "type": "string"
           }
         }
       },
       "NewFlora-and-fauna": {
         "required": [
-          "name",
-          "description",
-          "subTitle",
-          "badgeText"
+          "name"
         ],
         "properties": {
           "name": {
             "type": "string"
           },
+          "scientificName": {
+            "type": "string"
+          },
           "description": {
             "type": "string"
           },
-          "subTitle": {
-            "type": "string"
+          "riskLevel": {
+            "type": "string",
+            "enum": [
+              "endangered",
+              "endemic"
+            ]
           },
-          "badgeText": {
+          "wikiLink": {
             "type": "string"
           },
           "created_by": {
@@ -5258,9 +5449,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "availableDays": {
-                        "type": "string"
-                      },
                       "slug": {
                         "type": "uid"
                       },
@@ -5279,6 +5467,15 @@
                           "type": "string"
                         }
                       },
+                      "activities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "days": {
+                        "type": "component"
+                      },
                       "published_at": {
                         "type": "string"
                       },
@@ -5296,7 +5493,6 @@
                   "items": {
                     "required": [
                       "id",
-                      "route",
                       "name",
                       "difficultyLevel"
                     ],
@@ -5362,6 +5558,21 @@
                       },
                       "slug": {
                         "type": "uid"
+                      },
+                      "destination": {
+                        "type": "string"
+                      },
+                      "interests": {
+                        "type": "string",
+                        "enum": [
+                          "family",
+                          "adventure",
+                          "nature",
+                          "photography",
+                          "heritage",
+                          "entertainment",
+                          "farmTourism"
+                        ]
                       },
                       "created_by": {
                         "type": "string"
@@ -5540,9 +5751,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "availableDays": {
-                        "type": "string"
-                      },
                       "slug": {
                         "type": "uid"
                       },
@@ -5561,6 +5769,15 @@
                           "type": "string"
                         }
                       },
+                      "activities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "days": {
+                        "type": "component"
+                      },
                       "published_at": {
                         "type": "string"
                       },
@@ -5578,7 +5795,6 @@
                   "items": {
                     "required": [
                       "id",
-                      "route",
                       "name",
                       "difficultyLevel"
                     ],
@@ -5644,6 +5860,21 @@
                       },
                       "slug": {
                         "type": "uid"
+                      },
+                      "destination": {
+                        "type": "string"
+                      },
+                      "interests": {
+                        "type": "string",
+                        "enum": [
+                          "family",
+                          "adventure",
+                          "nature",
+                          "photography",
+                          "heritage",
+                          "entertainment",
+                          "farmTourism"
+                        ]
                       },
                       "created_by": {
                         "type": "string"
@@ -6044,9 +6275,6 @@
                 "closingTime": {
                   "type": "string"
                 },
-                "availableDays": {
-                  "type": "string"
-                },
                 "slug": {
                   "type": "uid"
                 },
@@ -6064,6 +6292,15 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "days": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"
@@ -6370,9 +6607,6 @@
               "closingTime": {
                 "type": "string"
               },
-              "availableDays": {
-                "type": "string"
-              },
               "slug": {
                 "type": "uid"
               },
@@ -6390,6 +6624,15 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "activities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "days": {
+                "type": "component"
               },
               "published_at": {
                 "type": "string"
@@ -6409,7 +6652,6 @@
           "activity": {
             "required": [
               "id",
-              "route",
               "name",
               "difficultyLevel"
             ],
@@ -6476,6 +6718,21 @@
               "slug": {
                 "type": "uid"
               },
+              "destination": {
+                "type": "string"
+              },
+              "interests": {
+                "type": "string",
+                "enum": [
+                  "family",
+                  "adventure",
+                  "nature",
+                  "photography",
+                  "heritage",
+                  "entertainment",
+                  "farmTourism"
+                ]
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6537,7 +6794,6 @@
       "Things-to-do": {
         "required": [
           "id",
-          "route",
           "name",
           "difficultyLevel"
         ],
@@ -6808,12 +7064,103 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "destination": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "reviews": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "route": {
+                "type": "component"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "image": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "nearMes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "openingTime": {
+                "type": "string"
+              },
+              "closingTime": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "location": {
+                "type": "component"
+              },
+              "floraAndFaunas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "challenges": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "activities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "days": {
+                "type": "component"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "interests": {
+            "type": "string",
+            "enum": [
+              "family",
+              "adventure",
+              "nature",
+              "photography",
+              "heritage",
+              "entertainment",
+              "farmTourism"
+            ]
           }
         }
       },
       "NewThings-to-do": {
         "required": [
-          "route",
           "name",
           "difficultyLevel"
         ],
@@ -6927,6 +7274,21 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "interests": {
+            "type": "string",
+            "enum": [
+              "family",
+              "adventure",
+              "nature",
+              "photography",
+              "heritage",
+              "entertainment",
+              "farmTourism"
+            ]
           },
           "created_by": {
             "type": "string"

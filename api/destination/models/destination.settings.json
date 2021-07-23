@@ -51,9 +51,6 @@
     "closingTime": {
       "type": "time"
     },
-    "availableDays": {
-      "type": "string"
-    },
     "slug": {
       "type": "uid",
       "targetField": "name"
@@ -61,13 +58,23 @@
     "location": {
       "type": "component",
       "repeatable": false,
-      "component": "collection-type-components.location"
+      "component": "collection-type-components.location",
+      "required": false
     },
     "floraAndFaunas": {
       "collection": "flora-and-fauna"
     },
     "challenges": {
       "collection": "challenge"
+    },
+    "activities": {
+      "via": "destination",
+      "collection": "things-to-do"
+    },
+    "days": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.days"
     }
   }
 }

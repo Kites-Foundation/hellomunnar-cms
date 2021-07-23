@@ -15,7 +15,7 @@
       "type": "component",
       "repeatable": false,
       "component": "common.route",
-      "required": true
+      "required": false
     },
     "name": {
       "type": "string",
@@ -77,6 +77,22 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "destination": {
+      "via": "activities",
+      "model": "destination"
+    },
+    "interests": {
+      "type": "enumeration",
+      "enum": [
+        "family",
+        "adventure",
+        "nature",
+        "photography",
+        "heritage",
+        "entertainment",
+        "farmTourism"
+      ]
     }
   }
 }

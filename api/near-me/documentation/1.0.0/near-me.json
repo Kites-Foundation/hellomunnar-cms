@@ -658,9 +658,6 @@
                 "closingTime": {
                   "type": "string"
                 },
-                "availableDays": {
-                  "type": "string"
-                },
                 "slug": {
                   "type": "uid"
                 },
@@ -678,6 +675,15 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "activities": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "days": {
+                  "type": "component"
                 },
                 "published_at": {
                   "type": "string"

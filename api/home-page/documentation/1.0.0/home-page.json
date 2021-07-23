@@ -398,9 +398,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "availableDays": {
-                        "type": "string"
-                      },
                       "slug": {
                         "type": "uid"
                       },
@@ -419,6 +416,15 @@
                           "type": "string"
                         }
                       },
+                      "activities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "days": {
+                        "type": "component"
+                      },
                       "published_at": {
                         "type": "string"
                       },
@@ -436,7 +442,6 @@
                   "items": {
                     "required": [
                       "id",
-                      "route",
                       "name",
                       "difficultyLevel"
                     ],
@@ -502,6 +507,21 @@
                       },
                       "slug": {
                         "type": "uid"
+                      },
+                      "destination": {
+                        "type": "string"
+                      },
+                      "interests": {
+                        "type": "string",
+                        "enum": [
+                          "family",
+                          "adventure",
+                          "nature",
+                          "photography",
+                          "heritage",
+                          "entertainment",
+                          "farmTourism"
+                        ]
                       },
                       "created_by": {
                         "type": "string"
@@ -680,9 +700,6 @@
                       "closingTime": {
                         "type": "string"
                       },
-                      "availableDays": {
-                        "type": "string"
-                      },
                       "slug": {
                         "type": "uid"
                       },
@@ -701,6 +718,15 @@
                           "type": "string"
                         }
                       },
+                      "activities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "days": {
+                        "type": "component"
+                      },
                       "published_at": {
                         "type": "string"
                       },
@@ -718,7 +744,6 @@
                   "items": {
                     "required": [
                       "id",
-                      "route",
                       "name",
                       "difficultyLevel"
                     ],
@@ -784,6 +809,21 @@
                       },
                       "slug": {
                         "type": "uid"
+                      },
+                      "destination": {
+                        "type": "string"
+                      },
+                      "interests": {
+                        "type": "string",
+                        "enum": [
+                          "family",
+                          "adventure",
+                          "nature",
+                          "photography",
+                          "heritage",
+                          "entertainment",
+                          "farmTourism"
+                        ]
                       },
                       "created_by": {
                         "type": "string"

@@ -746,9 +746,6 @@
           "closingTime": {
             "type": "string"
           },
-          "availableDays": {
-            "type": "string"
-          },
           "slug": {
             "type": "uid"
           },
@@ -779,10 +776,7 @@
             "items": {
               "required": [
                 "id",
-                "name",
-                "description",
-                "subTitle",
-                "badgeText"
+                "name"
               ],
               "properties": {
                 "id": {
@@ -791,17 +785,27 @@
                 "name": {
                   "type": "string"
                 },
+                "scientificName": {
+                  "type": "string"
+                },
                 "description": {
                   "type": "string"
                 },
-                "image": {
+                "riskLevel": {
+                  "type": "string",
+                  "enum": [
+                    "endangered",
+                    "endemic"
+                  ]
+                },
+                "wikiLink": {
                   "type": "string"
                 },
-                "subTitle": {
-                  "type": "string"
-                },
-                "badgeText": {
-                  "type": "string"
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "created_by": {
                   "type": "string"
@@ -831,6 +835,140 @@
                 "updated_by": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "difficultyLevel"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "route": {
+                  "type": "component"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "location": {
+                  "type": "component"
+                },
+                "openTime": {
+                  "type": "string"
+                },
+                "closingTime": {
+                  "type": "string"
+                },
+                "difficultyLevel": {
+                  "type": "string",
+                  "enum": [
+                    "Difficult",
+                    "Moderate",
+                    "Easy"
+                  ]
+                },
+                "price": {
+                  "type": "string"
+                },
+                "booking": {
+                  "type": "component"
+                },
+                "reviews": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "challenges": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "types": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "slug": {
+                  "type": "uid"
+                },
+                "destination": {
+                  "type": "string"
+                },
+                "interests": {
+                  "type": "string",
+                  "enum": [
+                    "family",
+                    "adventure",
+                    "nature",
+                    "photography",
+                    "heritage",
+                    "entertainment",
+                    "farmTourism"
+                  ]
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "days": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
               }
             }
           },
@@ -892,9 +1030,6 @@
           "closingTime": {
             "type": "string"
           },
-          "availableDays": {
-            "type": "string"
-          },
           "slug": {
             "type": "uid"
           },
@@ -930,6 +1065,51 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "days": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
+              }
             }
           },
           "published_at": {

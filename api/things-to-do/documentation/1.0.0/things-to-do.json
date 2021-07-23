@@ -530,7 +530,6 @@
       "Things-to-do": {
         "required": [
           "id",
-          "route",
           "name",
           "difficultyLevel"
         ],
@@ -801,12 +800,103 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "destination": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "reviews": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "route": {
+                "type": "component"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "image": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "nearMes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "openingTime": {
+                "type": "string"
+              },
+              "closingTime": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "location": {
+                "type": "component"
+              },
+              "floraAndFaunas": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "challenges": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "activities": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "days": {
+                "type": "component"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "interests": {
+            "type": "string",
+            "enum": [
+              "family",
+              "adventure",
+              "nature",
+              "photography",
+              "heritage",
+              "entertainment",
+              "farmTourism"
+            ]
           }
         }
       },
       "NewThings-to-do": {
         "required": [
-          "route",
           "name",
           "difficultyLevel"
         ],
@@ -920,6 +1010,21 @@
           },
           "slug": {
             "type": "uid"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "interests": {
+            "type": "string",
+            "enum": [
+              "family",
+              "adventure",
+              "nature",
+              "photography",
+              "heritage",
+              "entertainment",
+              "farmTourism"
+            ]
           },
           "created_by": {
             "type": "string"
