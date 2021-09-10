@@ -262,7 +262,7 @@
     "/activity-types/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of activity-types documents",
+        "description": "Retrieve the number of activity-types documents",
         "responses": {
           "200": {
             "description": "Retrieve activity-types document(s)",

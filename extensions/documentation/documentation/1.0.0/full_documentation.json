@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "07/23/2021 9:59:24 PM"
+    "x-generation-date": "09/10/2021 5:49:49 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -308,7 +308,7 @@
     "/activity-types/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of activity-types documents",
+        "description": "Retrieve the number of activity-types documents",
         "responses": {
           "200": {
             "description": "Retrieve activity-types document(s)",
