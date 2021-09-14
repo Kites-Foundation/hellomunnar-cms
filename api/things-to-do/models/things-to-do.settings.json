@@ -93,6 +93,11 @@
         "entertainment",
         "farmTourism"
       ]
+    },
+    "days": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.days"
     }
   }
 }

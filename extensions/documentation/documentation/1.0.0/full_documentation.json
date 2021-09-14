@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "09/14/2021 12:37:58 PM"
+    "x-generation-date": "09/14/2021 2:41:11 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5585,6 +5585,9 @@
                     "farmTourism"
                   ]
                 },
+                "days": {
+                  "type": "component"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -6165,6 +6168,9 @@
                           "farmTourism"
                         ]
                       },
+                      "days": {
+                        "type": "component"
+                      },
                       "created_by": {
                         "type": "string"
                       },
@@ -6466,6 +6472,9 @@
                           "entertainment",
                           "farmTourism"
                         ]
+                      },
+                      "days": {
+                        "type": "component"
                       },
                       "created_by": {
                         "type": "string"
@@ -7404,6 +7413,9 @@
                   "farmTourism"
                 ]
               },
+              "days": {
+                "type": "component"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -8013,6 +8025,45 @@
               "entertainment",
               "farmTourism"
             ]
+          },
+          "days": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
+              }
+            }
           }
         }
       },
@@ -8186,6 +8237,45 @@
               "entertainment",
               "farmTourism"
             ]
+          },
+          "days": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "sunday": {
+                "type": "boolean",
+                "default": false
+              },
+              "monday": {
+                "type": "boolean",
+                "default": false
+              },
+              "tuesday": {
+                "type": "boolean",
+                "default": false
+              },
+              "wednessday": {
+                "type": "boolean",
+                "default": false
+              },
+              "thursday": {
+                "type": "boolean",
+                "default": false
+              },
+              "friday": {
+                "type": "boolean",
+                "default": false
+              },
+              "saturday": {
+                "type": "boolean",
+                "default": false
+              }
+            }
           },
           "created_by": {
             "type": "string"

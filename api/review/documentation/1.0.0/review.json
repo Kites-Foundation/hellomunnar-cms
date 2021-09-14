@@ -834,6 +834,9 @@
                   "farmTourism"
                 ]
               },
+              "days": {
+                "type": "component"
+              },
               "created_by": {
                 "type": "string"
               },
