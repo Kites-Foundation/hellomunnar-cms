@@ -573,17 +573,57 @@
               "id": {
                 "type": "string"
               },
-              "routeName": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
+              "routes": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "colorName": {
+                      "type": "string",
+                      "enum": [
+                        "Violet",
+                        "Indigo",
+                        "Blue",
+                        "Green",
+                        "Yellow",
+                        "Orrange",
+                        "Red"
+                      ]
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "illustrations": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "significantElement": {
+                      "type": "string"
+                    },
+                    "storyBehind": {
+                      "type": "string"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           },
@@ -741,17 +781,57 @@
               "id": {
                 "type": "string"
               },
-              "routeName": {
-                "type": "string",
-                "enum": [
-                  "Violet",
-                  "Indigo",
-                  "Blue",
-                  "Green",
-                  "Yellow",
-                  "Orrange",
-                  "Red"
-                ]
+              "routes": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "colorName": {
+                      "type": "string",
+                      "enum": [
+                        "Violet",
+                        "Indigo",
+                        "Blue",
+                        "Green",
+                        "Yellow",
+                        "Orrange",
+                        "Red"
+                      ]
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "illustrations": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "significantElement": {
+                      "type": "string"
+                    },
+                    "storyBehind": {
+                      "type": "string"
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           },

@@ -7,17 +7,8 @@
   },
   "options": {},
   "attributes": {
-    "routeName": {
-      "type": "enumeration",
-      "enum": [
-        "Violet",
-        "Indigo",
-        "Blue",
-        "Green",
-        "Yellow",
-        "Orrange",
-        "Red"
-      ]
+    "routes": {
+      "collection": "route"
     }
   }
 }

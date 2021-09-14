@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/things-to-dos": {
+    "/routes": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Route"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Things-to-do"
+          "Route"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Route"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Things-to-do"
+          "Route"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewThings-to-do"
+                "$ref": "#/components/schemas/NewRoute"
               }
             }
           }
         }
       }
     },
-    "/things-to-dos/count": {
+    "/routes/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Things-to-do"
+          "Route"
         ],
         "parameters": []
       }
     },
-    "/things-to-dos/{id}": {
+    "/routes/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Route"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Things-to-do"
+          "Route"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Route"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Things-to-do"
+          "Route"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewThings-to-do"
+                "$ref": "#/components/schemas/NewRoute"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Things-to-do"
+          "Route"
         ],
         "parameters": [
           {
@@ -527,86 +514,33 @@
   },
   "components": {
     "schemas": {
-      "Things-to-do": {
+      "Route": {
         "required": [
-          "id",
-          "name",
-          "difficultyLevel"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "route": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "routes": {
-                "type": "array",
-                "items": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "colorName": {
-                      "type": "string",
-                      "enum": [
-                        "Violet",
-                        "Indigo",
-                        "Blue",
-                        "Green",
-                        "Yellow",
-                        "Orrange",
-                        "Red"
-                      ]
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "illustrations": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "significantElement": {
-                      "type": "string"
-                    },
-                    "storyBehind": {
-                      "type": "string"
-                    },
-                    "published_at": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
           "name": {
             "type": "string"
+          },
+          "colorName": {
+            "type": "string",
+            "enum": [
+              "Violet",
+              "Indigo",
+              "Blue",
+              "Green",
+              "Yellow",
+              "Orrange",
+              "Red"
+            ]
           },
           "description": {
             "type": "string"
           },
-          "images": {
+          "illustrations": {
             "type": "array",
             "items": {
               "required": [
@@ -676,435 +610,47 @@
               }
             }
           },
-          "location": {
-            "type": "object",
-            "required": [
-              "id",
-              "latitude",
-              "longitude"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "locationName": {
-                "type": "string"
-              },
-              "latitude": {
-                "type": "number"
-              },
-              "longitude": {
-                "type": "number"
-              }
-            }
-          },
-          "openTime": {
+          "significantElement": {
             "type": "string"
           },
-          "closingTime": {
+          "storyBehind": {
             "type": "string"
           },
-          "difficultyLevel": {
+          "published_at": {
             "type": "string",
-            "enum": [
-              "Difficult",
-              "Moderate",
-              "Easy"
-            ]
-          },
-          "price": {
-            "type": "string"
-          },
-          "booking": {
-            "type": "object",
-            "required": [
-              "id",
-              "url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "contactName": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "integer"
-              }
-            }
-          },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "published",
-                "date",
-                "rating"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published": {
-                  "type": "boolean"
-                },
-                "user": {
-                  "type": "string"
-                },
-                "destination": {
-                  "type": "string"
-                },
-                "date": {
-                  "type": "string"
-                },
-                "activity": {
-                  "type": "string"
-                },
-                "rating": {
-                  "type": "number"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "types": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "icon": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "destination": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "reviews": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "route": {
-                "type": "component"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "nearMes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "openingTime": {
-                "type": "string"
-              },
-              "closingTime": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "location": {
-                "type": "component"
-              },
-              "floraAndFaunas": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "challenges": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "activities": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "days": {
-                "type": "component"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "interests": {
-            "type": "string",
-            "enum": [
-              "family",
-              "adventure",
-              "nature",
-              "photography",
-              "heritage",
-              "entertainment",
-              "farmTourism"
-            ]
+            "format": "date-time"
           }
         }
       },
-      "NewThings-to-do": {
-        "required": [
-          "name",
-          "difficultyLevel"
-        ],
+      "NewRoute": {
         "properties": {
-          "route": {
-            "type": "object",
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "routes": {
-                "type": "array",
-                "items": {
-                  "required": [
-                    "id"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "colorName": {
-                      "type": "string",
-                      "enum": [
-                        "Violet",
-                        "Indigo",
-                        "Blue",
-                        "Green",
-                        "Yellow",
-                        "Orrange",
-                        "Red"
-                      ]
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "illustrations": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "significantElement": {
-                      "type": "string"
-                    },
-                    "storyBehind": {
-                      "type": "string"
-                    },
-                    "published_at": {
-                      "type": "string"
-                    },
-                    "created_by": {
-                      "type": "string"
-                    },
-                    "updated_by": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
           "name": {
             "type": "string"
+          },
+          "colorName": {
+            "type": "string",
+            "enum": [
+              "Violet",
+              "Indigo",
+              "Blue",
+              "Green",
+              "Yellow",
+              "Orrange",
+              "Red"
+            ]
           },
           "description": {
             "type": "string"
           },
-          "location": {
-            "type": "object",
-            "required": [
-              "id",
-              "latitude",
-              "longitude"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "locationName": {
-                "type": "string"
-              },
-              "latitude": {
-                "type": "number"
-              },
-              "longitude": {
-                "type": "number"
-              }
-            }
-          },
-          "openTime": {
+          "significantElement": {
             "type": "string"
           },
-          "closingTime": {
+          "storyBehind": {
             "type": "string"
           },
-          "difficultyLevel": {
+          "published_at": {
             "type": "string",
-            "enum": [
-              "Difficult",
-              "Moderate",
-              "Easy"
-            ]
-          },
-          "price": {
-            "type": "string"
-          },
-          "booking": {
-            "type": "object",
-            "required": [
-              "id",
-              "url"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "contactName": {
-                "type": "string"
-              },
-              "contactNumber": {
-                "type": "integer"
-              }
-            }
-          },
-          "reviews": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "challenges": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "types": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "slug": {
-            "type": "uid"
-          },
-          "destination": {
-            "type": "string"
-          },
-          "interests": {
-            "type": "string",
-            "enum": [
-              "family",
-              "adventure",
-              "nature",
-              "photography",
-              "heritage",
-              "entertainment",
-              "farmTourism"
-            ]
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -1116,5 +662,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Route"
+    }
+  ]
 }
