@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "09/14/2021 2:41:11 PM"
+    "x-generation-date": "09/16/2021 8:48:14 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5636,6 +5636,32 @@
               }
             }
           },
+          "activityTypes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5814,6 +5840,12 @@
                 "type": "boolean",
                 "default": false
               }
+            }
+          },
+          "activityTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           },
           "published_at": {
@@ -6069,6 +6101,12 @@
                       },
                       "days": {
                         "type": "component"
+                      },
+                      "activityTypes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"
@@ -6374,6 +6412,12 @@
                       },
                       "days": {
                         "type": "component"
+                      },
+                      "activityTypes": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
                       },
                       "published_at": {
                         "type": "string"
@@ -6942,6 +6986,12 @@
                 "days": {
                   "type": "component"
                 },
+                "activityTypes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -7313,6 +7363,12 @@
               },
               "days": {
                 "type": "component"
+              },
+              "activityTypes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
@@ -8002,6 +8058,12 @@
               },
               "days": {
                 "type": "component"
+              },
+              "activityTypes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "published_at": {
                 "type": "string"
