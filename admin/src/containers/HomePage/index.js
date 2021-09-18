@@ -7,73 +7,24 @@
 import React, { memo, useMemo } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { get, upperFirst } from 'lodash';
-import { auth, LoadingIndicatorPage } from 'strapi-helper-plugin';
+import { auth } from 'strapi-helper-plugin';
 import PageTitle from '../../components/PageTitle';
-import { useModels } from '../../hooks';
-
-import useFetch from './hooks';
-import { ALink, Block, Container, LinkWrapper, P, Wave, Separator } from './components';
-import BlogPost from './BlogPost';
+import { ALink, Block, Container, P, Wave, Separator } from './components';
 import SocialLink from './SocialLink';
 
-const FIRST_BLOCK_LINKS = [
+const SOCIAL_LINKS = [
   {
-    link:
-      'https://github.com/kites-foundation/hello-munnar-frontend',
-    contentId: 'app.components.BlockLink.documentation.content',
-    titleId: 'app.components.BlockLink.documentation',
+    name: 'Discord',
+    link: 'https://chat.kitesfoundation.org/',
   },
   {
-    link: 'https://github.com/kites-foundation/hellomunnar-cms',
-    contentId: 'app.components.BlockLink.code.content',
-    titleId: 'app.components.BlockLink.code',
-  },
+    name: 'GitHub',
+    link: 'https://github.com/Kites-Foundation/hellomunnar-cms',
+  }
 ];
 
 const HomePage = ({ history: { push } }) => {
-  const { error, isLoading, posts } = useFetch();
-  // Temporary until we develop the menu API
-  const { collectionTypes, singleTypes, isLoading: isLoadingForModels } = useModels();
-
-  const handleClick = e => {
-    e.preventDefault();
-
-    push(
-      '/plugins/content-type-builder/content-types/plugins::users-permissions.user?modalType=contentType&kind=collectionType&actionType=create&settingType=base&forTarget=contentType&headerId=content-type-builder.modalForm.contentType.header-create&header_icon_isCustom_1=false&header_icon_name_1=contentType&header_label_1=null'
-    );
-  };
-
-  const hasAlreadyCreatedContentTypes = useMemo(() => {
-    const filterContentTypes = contentTypes => contentTypes.filter(c => c.isDisplayed);
-
-    return (
-      filterContentTypes(collectionTypes).length > 1 || filterContentTypes(singleTypes).length > 0
-    );
-  }, [collectionTypes, singleTypes]);
-
-  if (isLoadingForModels) {
-    return <LoadingIndicatorPage />;
-  }
-
-  const headerId = hasAlreadyCreatedContentTypes
-    ? 'HomePage.greetings'
-    : 'app.components.HomePage.welcome';
   const username = get(auth.getUserInfo(), 'firstname', '');
-  const linkProps = hasAlreadyCreatedContentTypes
-    ? {
-      id: 'app.components.HomePage.button.blog',
-      href: 'https://strapi.io/blog/',
-      onClick: () => {},
-      type: 'blog',
-      target: '_blank',
-    }
-    : {
-      id: 'app.components.HomePage.create',
-      href: '',
-      onClick: handleClick,
-      type: 'documentation',
-    };
-
   return (
     <>
       <FormattedMessage id="HomePage.helmet.title">
@@ -85,33 +36,48 @@ const HomePage = ({ history: { push } }) => {
             <Block>
               <Wave />
               <FormattedMessage
-                id={headerId}
+                id={"HomePage.greetings"}
                 values={{
                   name: upperFirst(username),
                 }}
               >
                 {msg => <h2 id="mainHeader">{msg}</h2>}
               </FormattedMessage>
+              <P>Welcome to Hello Munnar admin panel! Please ask questions on Kites Foundation Discord Server.
+                if you have any doubt using this software.</P>
+              <p>
+                Report bugs via the GitHub issues, if you face any.
+              </p>
+              <ALink
+                rel="noopener noreferrer"
+                href={"https://github.com/Kites-Foundation/hellomunnar-cms/issues/new"}
+                type={"blog"}
+                target="_blank"
+                style={{ verticalAlign: ' bottom', marginBottom: 5 }}
+              >
+                New GitHub Issue
+              </ALink>
             </Block>
           </div>
 
           <div className="col-md-12 col-lg-4">
             <Block style={{ paddingRight: 30, paddingBottom: 0 }}>
-              <FormattedMessage id="HomePage.community">{msg => <h2>{msg}</h2>}</FormattedMessage>
-              <FormattedMessage id="app.components.HomePage.community.content">
-                {content => <P style={{ marginTop: 7, marginBottom: 0 }}>{content}</P>}
-              </FormattedMessage>
-              <FormattedMessage id="HomePage.roadmap">
-                {msg => (
-                  <ALink
-                    rel="noopener noreferrer"
-                    href="https://chat.kitesfoundation.org"
-                    target="_blank"
-                  >
-                    {msg}
-                  </ALink>
-                )}
-              </FormattedMessage>
+              <h2>Community Links</h2>
+              <p>Join our discord server to interact with the people behind Hello Munnar Project. Browse the source code via GitHub.</p>
+              <Separator style={{ marginTop: 18 }} />
+              <div
+                className="row social-wrapper"
+                style={{
+                  display: 'flex',
+                  margin: 0,
+                  marginTop: 36,
+                  marginLeft: -15,
+                }}
+              >
+                {SOCIAL_LINKS.map((value, key) => (
+                  <SocialLink key={key} {...value} />
+                ))}
+              </div>
             </Block>
           </div>
         </div>
