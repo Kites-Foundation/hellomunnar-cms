@@ -718,8 +718,7 @@
           "booking": {
             "type": "object",
             "required": [
-              "id",
-              "url"
+              "id"
             ],
             "properties": {
               "id": {
@@ -1097,8 +1096,7 @@
           "booking": {
             "type": "object",
             "required": [
-              "id",
-              "url"
+              "id"
             ],
             "properties": {
               "id": {

@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "09/16/2021 8:48:14 PM"
+    "x-generation-date": "09/18/2021 2:50:55 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7867,8 +7867,7 @@
           "booking": {
             "type": "object",
             "required": [
-              "id",
-              "url"
+              "id"
             ],
             "properties": {
               "id": {
@@ -8246,8 +8245,7 @@
           "booking": {
             "type": "object",
             "required": [
-              "id",
-              "url"
+              "id"
             ],
             "properties": {
               "id": {

@@ -2,13 +2,14 @@
   "collectionName": "components_collection_type_components_bookings",
   "info": {
     "name": "booking",
-    "icon": "address-book"
+    "icon": "address-book",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "url": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "contactName": {
       "type": "string"
