@@ -626,9 +626,6 @@
                     "storyBehind": {
                       "type": "string"
                     },
-                    "published_at": {
-                      "type": "string"
-                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -1105,9 +1102,6 @@
                       "type": "string"
                     },
                     "storyBehind": {
-                      "type": "string"
-                    },
-                    "published_at": {
                       "type": "string"
                     },
                     "created_by": {

@@ -14,7 +14,7 @@
       "name": "MIT",
       "url": "https://github.com/Kites-Foundation/hellomunnar-cms/blob/master/LICENSE"
     },
-    "x-generation-date": "09/18/2021 2:50:55 PM"
+    "x-generation-date": "09/18/2021 6:58:47 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5247,9 +5247,6 @@
                     "storyBehind": {
                       "type": "string"
                     },
-                    "published_at": {
-                      "type": "string"
-                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -5726,9 +5723,6 @@
                       "type": "string"
                     },
                     "storyBehind": {
-                      "type": "string"
-                    },
-                    "published_at": {
                       "type": "string"
                     },
                     "created_by": {
@@ -6874,9 +6868,6 @@
                     "storyBehind": {
                       "type": "string"
                     },
-                    "published_at": {
-                      "type": "string"
-                    },
                     "created_by": {
                       "type": "string"
                     },
@@ -7086,9 +7077,6 @@
                       "type": "string"
                     },
                     "storyBehind": {
-                      "type": "string"
-                    },
-                    "published_at": {
                       "type": "string"
                     },
                     "created_by": {
@@ -7631,10 +7619,6 @@
           },
           "storyBehind": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
@@ -7663,10 +7647,6 @@
           },
           "storyBehind": {
             "type": "string"
-          },
-          "published_at": {
-            "type": "string",
-            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -7733,9 +7713,6 @@
                       "type": "string"
                     },
                     "storyBehind": {
-                      "type": "string"
-                    },
-                    "published_at": {
                       "type": "string"
                     },
                     "created_by": {
@@ -8181,9 +8158,6 @@
                       "type": "string"
                     },
                     "storyBehind": {
-                      "type": "string"
-                    },
-                    "published_at": {
                       "type": "string"
                     },
                     "created_by": {
