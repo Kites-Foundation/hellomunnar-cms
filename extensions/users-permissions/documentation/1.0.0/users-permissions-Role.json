@@ -568,10 +568,16 @@
                   }
                 },
                 "favourites": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                  "type": "component"
+                },
+                "firstName": {
+                  "type": "string"
+                },
+                "lastName": {
+                  "type": "string"
+                },
+                "profilePicture": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

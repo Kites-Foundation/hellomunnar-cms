@@ -1258,7 +1258,9 @@
                 "id",
                 "title",
                 "description",
-                "published"
+                "published",
+                "date",
+                "rating"
               ],
               "properties": {
                 "id": {
@@ -1285,6 +1287,15 @@
                 "destination": {
                   "type": "string"
                 },
+                "date": {
+                  "type": "string"
+                },
+                "activity": {
+                  "type": "string"
+                },
+                "rating": {
+                  "type": "number"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -1295,97 +1306,273 @@
             }
           },
           "favourites": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "title",
-                "description",
-                "map_url",
-                "review_average",
-                "reviews_count",
-                "thumbnail_image"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "reviews": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "destinations": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "reviews": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "route": {
+                      "type": "component"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "nearMes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "openingTime": {
+                      "type": "string"
+                    },
+                    "closingTime": {
+                      "type": "string"
+                    },
+                    "slug": {
+                      "type": "uid"
+                    },
+                    "location": {
+                      "type": "component"
+                    },
+                    "floraAndFaunas": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "challenges": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "days": {
+                      "type": "component"
+                    },
+                    "activityTypes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
                   }
-                },
-                "description": {
-                  "type": "string"
-                },
-                "map_url": {
-                  "type": "string"
-                },
-                "review_average": {
-                  "type": "number"
-                },
-                "meta_title": {
-                  "type": "string"
-                },
-                "meta_description": {
-                  "type": "string"
-                },
-                "og_image": {
-                  "type": "string"
-                },
-                "slug": {
-                  "type": "uid"
-                },
-                "route": {
-                  "type": "string",
-                  "enum": [
-                    "Violet",
-                    "Indigo",
-                    "Blue",
-                    "Green",
-                    "Yellow",
-                    "Orrange",
-                    "Red",
-                    "NoRoute"
-                  ]
-                },
-                "days_available": {
-                  "type": "string"
-                },
-                "time_available": {
-                  "type": "string"
-                },
-                "reviews_count": {
-                  "type": "integer"
-                },
-                "features": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "thumbnail_image": {
-                  "type": "string"
-                },
-                "main_image": {
-                  "type": "string"
-                },
-                "floara_and_fauna": {
-                  "type": "component"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
                 }
+              },
+              "activities": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name",
+                    "difficultyLevel"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "route": {
+                      "type": "component"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "images": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "location": {
+                      "type": "component"
+                    },
+                    "openTime": {
+                      "type": "string"
+                    },
+                    "closingTime": {
+                      "type": "string"
+                    },
+                    "difficultyLevel": {
+                      "type": "string",
+                      "enum": [
+                        "Difficult",
+                        "Moderate",
+                        "Easy"
+                      ]
+                    },
+                    "price": {
+                      "type": "string"
+                    },
+                    "booking": {
+                      "type": "component"
+                    },
+                    "reviews": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "challenges": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "types": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "slug": {
+                      "type": "uid"
+                    },
+                    "destination": {
+                      "type": "string"
+                    },
+                    "interests": {
+                      "type": "string",
+                      "enum": [
+                        "family",
+                        "adventure",
+                        "nature",
+                        "photography",
+                        "heritage",
+                        "entertainment",
+                        "farmTourism"
+                      ]
+                    },
+                    "days": {
+                      "type": "component"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "profilePicture": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
           }
@@ -1437,10 +1624,208 @@
             }
           },
           "favourites": {
-            "type": "array",
-            "items": {
-              "type": "string"
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "destinations": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "reviews": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "route": {
+                      "type": "component"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "image": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "nearMes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "openingTime": {
+                      "type": "string"
+                    },
+                    "closingTime": {
+                      "type": "string"
+                    },
+                    "slug": {
+                      "type": "uid"
+                    },
+                    "location": {
+                      "type": "component"
+                    },
+                    "floraAndFaunas": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "challenges": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "activities": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "days": {
+                      "type": "component"
+                    },
+                    "activityTypes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "published_at": {
+                      "type": "string"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "activities": {
+                "type": "array",
+                "items": {
+                  "required": [
+                    "id",
+                    "name",
+                    "difficultyLevel"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "route": {
+                      "type": "component"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "images": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "location": {
+                      "type": "component"
+                    },
+                    "openTime": {
+                      "type": "string"
+                    },
+                    "closingTime": {
+                      "type": "string"
+                    },
+                    "difficultyLevel": {
+                      "type": "string",
+                      "enum": [
+                        "Difficult",
+                        "Moderate",
+                        "Easy"
+                      ]
+                    },
+                    "price": {
+                      "type": "string"
+                    },
+                    "booking": {
+                      "type": "component"
+                    },
+                    "reviews": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "challenges": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "types": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "slug": {
+                      "type": "uid"
+                    },
+                    "destination": {
+                      "type": "string"
+                    },
+                    "interests": {
+                      "type": "string",
+                      "enum": [
+                        "family",
+                        "adventure",
+                        "nature",
+                        "photography",
+                        "heritage",
+                        "entertainment",
+                        "farmTourism"
+                      ]
+                    },
+                    "days": {
+                      "type": "component"
+                    },
+                    "created_by": {
+                      "type": "string"
+                    },
+                    "updated_by": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
             }
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
