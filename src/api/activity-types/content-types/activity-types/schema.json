@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_types",
+  "info": {
+    "singularName": "activity-type",
+    "pluralName": "activity-types",
+    "displayName": "Activity-types",
+    "name": "activity-types"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "Review",
+    "name": "review"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "published": {
+      "type": "boolean",
+      "default": true,
+      "private": true,
+      "required": true
+    },
+    "user": {
+      "via": "reviews",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "destination": {
+      "via": "reviews",
+      "model": "destination"
+    },
+    "date": {
+      "type": "datetime",
+      "required": true
+    },
+    "activity": {
+      "via": "reviews",
+      "model": "things-to-do"
+    },
+    "rating": {
+      "type": "float",
+      "default": 0,
+      "required": true,
+      "max": 5,
+      "min": 0
+    }
+  }
+}

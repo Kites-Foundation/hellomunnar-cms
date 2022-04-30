@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "near_mes",
+  "info": {
+    "singularName": "near-me",
+    "pluralName": "near-mes",
+    "displayName": "Near-me",
+    "name": "near-me"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.location",
+      "required": true
+    },
+    "route": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.route",
+      "required": true
+    },
+    "openTime": {
+      "type": "time"
+    },
+    "closingTime": {
+      "type": "time"
+    },
+    "ownershipType": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Private",
+        "Government"
+      ],
+      "required": true,
+      "default": "None"
+    },
+    "contact": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Hospital",
+        "FuelStation",
+        "BankNATM",
+        "WasteBin"
+      ]
+    },
+    "nearestDestinations": {
+      "via": "nearMes",
+      "collection": "destination"
+    }
+  }
+}

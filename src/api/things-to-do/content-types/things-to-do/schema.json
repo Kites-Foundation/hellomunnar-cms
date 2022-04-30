@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "singularName": "things-to-do",
+    "pluralName": "things-to-dos",
+    "displayName": "Things-to-do",
+    "name": "things-to-do"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "route": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.route",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.location"
+    },
+    "openTime": {
+      "type": "time"
+    },
+    "closingTime": {
+      "type": "time"
+    },
+    "difficultyLevel": {
+      "type": "enumeration",
+      "enum": [
+        "Difficult",
+        "Moderate",
+        "Easy"
+      ],
+      "required": true
+    },
+    "price": {
+      "type": "string"
+    },
+    "booking": {
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.booking"
+    },
+    "reviews": {
+      "via": "activity",
+      "collection": "review"
+    },
+    "challenges": {
+      "collection": "challenge"
+    },
+    "types": {
+      "collection": "activity-types"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "destination": {
+      "via": "activities",
+      "model": "destination"
+    },
+    "interests": {
+      "type": "enumeration",
+      "enum": [
+        "family",
+        "adventure",
+        "nature",
+        "photography",
+        "heritage",
+        "entertainment",
+        "farmTourism"
+      ]
+    },
+    "days": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.days"
+    }
+  }
+}

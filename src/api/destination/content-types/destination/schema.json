@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destinations",
+  "info": {
+    "singularName": "destination",
+    "pluralName": "destinations",
+    "displayName": "Destination",
+    "name": "destination"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": false,
+    "populateCreatorFields": false,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "reviews": {
+      "via": "destination",
+      "collection": "review"
+    },
+    "route": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.route"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "nearMes": {
+      "via": "nearestDestinations",
+      "collection": "near-me",
+      "dominant": true
+    },
+    "openingTime": {
+      "type": "time"
+    },
+    "closingTime": {
+      "type": "time"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "collection-type-components.location",
+      "required": false
+    },
+    "floraAndFaunas": {
+      "collection": "flora-and-fauna"
+    },
+    "challenges": {
+      "collection": "challenge"
+    },
+    "activities": {
+      "via": "destination",
+      "collection": "things-to-do"
+    },
+    "days": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.days"
+    },
+    "activityTypes": {
+      "collection": "activity-types"
+    }
+  }
+}

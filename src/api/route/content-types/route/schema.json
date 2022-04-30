@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "routes",
+  "info": {
+    "singularName": "route",
+    "pluralName": "routes",
+    "displayName": "Route",
+    "name": "route"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "colorName": {
+      "type": "enumeration",
+      "enum": [
+        "Violet",
+        "Indigo",
+        "Blue",
+        "Green",
+        "Yellow",
+        "Orrange",
+        "Red"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "illustrations": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "significantElement": {
+      "type": "text"
+    },
+    "storyBehind": {
+      "type": "text"
+    }
+  }
+}
