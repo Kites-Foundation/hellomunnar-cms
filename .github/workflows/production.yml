@@ -1,11 +1,11 @@
-name: Deploy to staging environment
+name: Deploy to production environment
 on:
   push:
-    branches: [ staging ]
+    branches: [ production ]
   workflow_dispatch:
 jobs:
   deploy:
-    runs-on: [self-hosted,staging-strapi]
+    runs-on: [self-hosted,production-strapi]
     environment: staging
     steps:
       - uses: actions/checkout@v2
