@@ -1,12 +1,10 @@
 name: Deploy to production environment
 on:
-  push:
-    branches: [ production ]
   workflow_dispatch:
 jobs:
   deploy:
     runs-on: [self-hosted,production-strapi]
-    environment: staging
+    environment: production
     steps:
       - uses: actions/checkout@v2
       - name: Copy Env file
